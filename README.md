@@ -1,46 +1,61 @@
-# Getting Started with Create React App
+<h1 align="center">Projeto Reviva Fashion - React</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="#dart-about">About</a> &#xa0; | &#xa0;
+  <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
+  <a href="#rocket-technologies">Technologies</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-requirements">Requirements</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
+  <a href="#memo-license">License</a> &#xa0; | &#xa0;
+  <a href="https://github.com/lucasilvadrm" target="_blank">Author</a>
+</p>
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+## :dart: About
 
-### `npm start`
+Project developed during the UpTech by RCHLO program.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Screenshots
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<img src='public/img/img-site.jpeg' />
 
-### `npm test`
+## :rocket: Technologies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The following tools were used in this project:
 
-### `npm run build`
+- [HTML](https://devdocs.io/html/)
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [SASS](https://sass-lang.com/)
+- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [Typescript](https://www.typescriptlang.org/)
+- [React](https://pt-br.reactjs.org/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## :white_check_mark: Requirements
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Before starting :checkered_flag:, you need to have 
+[Git](https://git-scm.com) and
+[Node.js](https://nodejs.org/en/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## :checkered_flag: Starting
 
-### `npm run eject`
+bash
+# Clone this project
+```sh
+$ git clone https://github.com/lucasilvadrm/uptech-reviva-react
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Access
+```sh
+$ cd uptech-reviva-react
+$ npm install
+$ npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Open in your favorite browser
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Made with :heart: by <a href="https://github.com/lucasilvadrm" target="_blank">Lucas Silva</a>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+&#xa0;
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<a href="#top">Back to top</a>
