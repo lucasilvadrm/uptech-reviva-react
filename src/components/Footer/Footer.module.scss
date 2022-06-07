@@ -1,0 +1,85 @@
+@import '../../common/style/variables';
+
+@mixin properties ($width, $heigth, $font-size, $background) {
+    width: $width;
+    height: $heigth;
+    font-size: $font-size;
+    background-color: $background;
+}
+
+.footer {
+    border-top: 1px solid #C4C4C4;
+    padding: 1rem 1rem 0 1rem;
+    max-width: 1280px;
+    margin: auto;
+    height: 30rem;
+    display: grid;
+    row-gap: 2rem;
+    grid-template-rows: 6rem 1fr;
+    grid-template-columns: 1fr 1.5fr 1.3fr 2fr;
+    grid-template-areas:
+        "logo logo logo logo"
+        "menu-itens social-media contact newsletter";
+
+    .menu__title,
+    .social-media__title,
+    .contact__title,
+    .newsletter__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .menu__itens {
+        grid-area: menu-itens;
+    }
+
+    .menu__item,
+    .contact__item {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+        color: black;
+    }
+
+    .newsletter__button {
+        @include properties(30%, auto, 1.7rem, $tertiary-color);
+        color: $label-button-menu--color;
+    }
+
+    .newsletter {
+        grid-area: newsletter;
+
+        .newsletter__sign {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+
+            .newsletter__input {
+                width: 70%;
+                height: 3rem;
+                margin-right: 1rem;
+                border: 1px solid #C4C4C4;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 794px) {
+    .footer {
+        height: auto;
+        grid-template-rows: 4rem 1fr 8rem 1fr 8rem;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "logo"
+            "menu-itens"
+            "social-media"
+            "contact"
+            "newsletter";
+    }
+
+}
+
+.logo--justify {
+    grid-area: logo;
+    justify-self: flex-start;
+}

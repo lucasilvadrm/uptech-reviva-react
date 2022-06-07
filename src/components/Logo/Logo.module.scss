@@ -1,0 +1,23 @@
+@import '../../common/style/variables';
+
+.logo {
+    text-align: end;
+}
+
+.logo__title {
+    font-size: $font-size--logo-title;
+    font-weight: 700;
+    margin: 0;
+    color: $tertiary-color;
+}
+
+.logo__subtitle {
+    font-size: $font-size--logo-subtitle;
+    margin: 0;
+    color: $tertiary-color;
+}
+
+.logo--justify {
+    grid-area: logo;
+    justify-self: flex-start;
+}

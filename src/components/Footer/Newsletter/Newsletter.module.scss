@@ -1,0 +1,37 @@
+@import '../../../common/style/variables';
+
+@mixin properties ($width, $heigth, $font-size, $background) {
+    width: $width;
+    height: $heigth;
+    font-size: $font-size;
+    background-color: $background;
+}
+
+.newsletter {
+    grid-area: newsletter;
+
+    .newsletter__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .newsletter__sign {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+
+        .newsletter__input {
+            width: 70%;
+            height: 3rem;
+            margin-right: 1rem;
+            border: 1px solid #C4C4C4;
+            font-size: 1.5rem;
+        }
+
+        .newsletter__button {
+            @include properties(30%, auto, 1.7rem, $tertiary-color);
+            color: $label-button-menu--color;
+        }
+    }
+}
+

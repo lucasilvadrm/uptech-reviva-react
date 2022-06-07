@@ -1,0 +1,29 @@
+@import '../../common/style/variables';
+@import '../../common/style/base';
+
+@mixin properties ($width, $heigth, $font-size, $background) {
+    width: $width;
+    height: $heigth;
+    font-size: $font-size;
+    background-color: $background;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.item__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include properties(100%, 4rem, 1.3rem, $tertiary-color);
+    position: relative;
+    color: $label-button-menu--color;
+}
+
+.icon__purchase {
+    font-size: 2rem;
+    padding-right: .5rem;
+    position: absolute;
+    right: 0;
+}

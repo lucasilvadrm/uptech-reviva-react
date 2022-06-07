@@ -1,0 +1,21 @@
+.header {
+    align-items: center;
+    display: flex;
+    height: 12rem;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: auto;
+    padding: 1rem 2rem 1rem 2rem;
+
+    .purchase__icon--header {
+        color: #6a808f;
+        font-size: 3rem;
+    }
+}
+
+.icon__purchase {
+    font-size: 2rem;
+    padding-right: .5rem;
+    position: absolute;
+    right: 0;
+}

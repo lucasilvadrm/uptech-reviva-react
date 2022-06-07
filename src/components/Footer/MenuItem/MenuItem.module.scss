@@ -1,0 +1,25 @@
+.menu__itens {
+    grid-area: menu-itens;
+
+    .menu__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .menu__item {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+        color: black;
+    }
+}
+
+@media screen and (max-width: 794px) {
+    .menu__itens {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        // .menu__list {
+        //     display: flex;
+        // }
+    }
+}

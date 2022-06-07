@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Home from './pages/Home';
+
 
 
 const root = ReactDOM.createRoot(
@@ -7,7 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <h1>Renderizando</h1>
+    <Home/>
   </React.StrictMode>
 );
 

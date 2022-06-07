@@ -1,0 +1,23 @@
+.social-media {
+
+    .social-media__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    grid-area: social-media;
+
+    .social-media__list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .item {
+            margin-right: 2rem;
+
+            img {
+                width: 2.7rem;
+            }
+        }
+    }
+}

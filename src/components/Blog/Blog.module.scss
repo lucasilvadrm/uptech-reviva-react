@@ -1,0 +1,100 @@
+@import '../../common/style/variables';
+
+.blog-intro {
+    width: 100%;
+    height: 50rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    display: grid;
+    column-gap: 2.5rem;
+    row-gap: 3rem;
+    column-gap: 6rem;
+    grid-template-rows: 4rem 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "blog__title blog__title"
+        "article-big article-small--top"
+        "article-big article-small--bottom";
+
+    .article-big__description,
+    .article-small--top__description,
+    .article-small--bottom__description {
+        font-size: 1.8rem;
+        text-align: justify;
+        // @extend .item__title;
+    }
+
+    .blog__title {
+        grid-area: blog__title;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        color: $tertiary-color;
+    }
+
+    .article-big {
+        width: 100%;
+        grid-area: article-big;
+    }
+
+    .article-big__image {
+        width: 100%;
+        height: 35rem;
+        background-color: #C4C4C4;
+        margin-bottom: 1rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .display {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .article-small--top {
+        grid-area: article-small--top;
+    }
+
+    .article-small--top__image,
+    .article-small--bottom__image {
+        background-color: #C4C4C4;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .article-small--top__description,
+    .article-small--top__image,
+    .article-small--bottom__description,
+    .article-small--bottom__image {
+        width: 50%;
+    }
+
+    .article-small--bottom {
+        grid-area: article-small--bottom;
+    }
+
+    .article-small--bottom__image,
+    .article-small--top__image {
+        margin-right: 1rem;
+    }
+
+    @media screen and (max-width: 794px) {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    @media screen and (max-width: 386px) {
+        .article-small--top__description,
+        .article-small--bottom__description {
+            font-size: 1rem;
+        }
+
+    }
+}
