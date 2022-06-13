@@ -1,0 +1,61 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+$column-gap--value: 3rem;
+
+.wallet {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: grid;
+  column-gap: $column-gap--value;
+  grid-template-rows: 5rem 1fr;
+  grid-template-columns: calc(80% - $column-gap--value) 20%;
+  grid-template-areas:
+    "wallet__title wallet__title"
+    "wallet__list cart-total";
+
+  .wallet__title {
+    grid-area: wallet__title;
+    font-size: 2.5rem;
+    color: $tertiary-color;
+  }
+
+  .cart-total {
+    grid-area: cart-total;
+    background-color: $fourth-color;
+    padding: 0 1.3rem;
+    display: grid;
+    grid-template-rows: 20% 60% 20%;
+    min-width: 22rem;
+
+    .total {
+      display: flex;
+      justify-content: space-between;
+
+      .total__title,
+      .total__value {
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+    }
+
+    .quantity-price {
+      margin-right: 3rem;
+      margin-left: 3rem;
+    }
+
+    .quantity-price p {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .wallet__button {
+      @include properties(100%, 6rem, 1.4rem, $tertiary-color);
+      align-self: flex-end;
+      font-weight: 700;
+      color: $label-button-menu--color;
+      margin-bottom: 1rem
+    }
+  }
+}

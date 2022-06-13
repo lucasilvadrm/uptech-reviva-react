@@ -27,5 +27,5 @@ export function ProductSize({ item }: Props) {
                 );
             })}
         </fieldset>
-    )
+    );
 }

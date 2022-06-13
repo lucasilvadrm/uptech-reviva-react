@@ -1,15 +1,11 @@
-@import '../../common/style/variables';
-@import '../../common/style/base';
+@import '../../styles/variables';
+@import '../../styles/base';
 
 @mixin properties ($width, $heigth, $font-size, $background) {
     width: $width;
     height: $heigth;
     font-size: $font-size;
     background-color: $background;
-}
-
-button:hover {
-    cursor: pointer;
 }
 
 .item__button {
