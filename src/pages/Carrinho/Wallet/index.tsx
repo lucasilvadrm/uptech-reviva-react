@@ -1,6 +1,6 @@
+import { useRecoilValue } from 'recoil';
 import { formatarPreco } from '../../../functions';
 import { Product } from '../../../types/product';
-import { storage } from '../../Home/data';
 import styles from './Wallet.module.scss';
 import { WalletList } from './WalletList';
 

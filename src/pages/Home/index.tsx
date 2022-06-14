@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { RecoilRoot, useRecoilState } from "recoil";
 import Banner from "../../components/Banner";
 import Blog from "../../components/Blog";
 import Footer from "../../components/Footer";
@@ -7,69 +8,70 @@ import Main from "../../components/Main";
 import Navbar from "../../components/Nav";
 import { Products } from "../../components/Products";
 import Search from "../../components/Search";
-import { verificaLocalStorage } from "../../functions";
+import { cartState, storageState } from "../../state/atom";
 import { Product } from "../../types/product";
-import { storage } from "./data";
 
-
-verificaLocalStorage(storage);
-const productsLocalStorage: Product[] = JSON.parse(localStorage.getItem('produtos') as string);
-const initialCart: Product[] = JSON.parse(localStorage.getItem('carrinho') as string);
 
 export default function Home() {
-  const [products] = useState<Product[]>(productsLocalStorage);
-  const [cart, setCart] = useState<Product[]>(initialCart);
+  const [products, setUpdateStorage] = useRecoilState(storageState);
+  const [cart, setUpdateCart] = useRecoilState(cartState);
 
   useEffect(() => {
-    localStorage.setItem('carrinho', JSON.stringify(cart));
-  }, [cart]);
+    console.log(cart);
+    console.log(products);
+  }, [cart, products]);
 
   function addCart(item: Product): void {
-    const searchProduct = cart.find(product => product.id === item.id);
+    const productInCart = cart.find(product => product.id === item.id);
 
-    if (!searchProduct) {
-      setCart([...cart, { ...item, quantidade_carrinho: 1 }]);
-      alert(`Adicionado na sacola! Itens restantes: ${item.quantidade_disponivel - 1}`)
-      return;
+    const updatedProducts = products.map(product => {
+      if (product.id === item.id) {
+        return { ...product, quantidade_disponivel: product.quantidade_disponivel - 1 }
+      }
+      return product;
+    })
+
+    if (!productInCart) {
+      setUpdateCart([...cart, { ...item, quantidade_carrinho: 1 }]);
+      return setUpdateStorage(updatedProducts);
     }
 
-    if (searchProduct.quantidade_carrinho < searchProduct.quantidade_disponivel) {
-      const productFiltered = cart.filter(productCart => productCart.id !== searchProduct.id);
-      setCart([
-        ...productFiltered,
+    if (productInCart.quantidade_carrinho < productInCart.quantidade_disponivel) {
+      const productsFiltered = cart.filter(productCart => productCart.id !== productInCart.id);
+      setUpdateCart([
+        ...productsFiltered,
         {
-          ...searchProduct,
-          quantidade_carrinho: searchProduct.quantidade_carrinho + 1
+          ...productInCart,
+          quantidade_carrinho: productInCart.quantidade_carrinho + 1
         }
       ]);
-    }
 
-    const avaliable = (searchProduct.quantidade_disponivel - searchProduct.quantidade_carrinho) - 1
-    avaliable >= 0 ? alert(`Adicionado na sacola! Itens restantes: ${avaliable}`) : alert(`${searchProduct.nome} indisponível!`);
+      return setUpdateStorage(updatedProducts);
+    }
   }
 
   return (
-    <>
+    <RecoilRoot>
       <Header />
       <Navbar />
       <Main>
-          <Search />
-          <Products
-            products={products}
-            addCart={addCart}
-            tag={'releases'}
-            title='Últimos lançamentos'
-          />
-          <Banner />
-          <Products
-            products={products}
-            addCart={addCart}
-            tag={'summer'}
-            title='Coleção Verão'
-          />
-          <Blog />
+        <Search />
+        <Products
+          products={products}
+          addCart={addCart}
+          tag={'releases'}
+          title='Últimos lançamentos'
+        />
+        <Banner />
+        <Products
+          products={products}
+          addCart={addCart}
+          tag={'summer'}
+          title='Coleção Verão'
+        />
+        <Blog />
       </Main>
       <Footer />
-    </>
+    </RecoilRoot>
   )
 }
