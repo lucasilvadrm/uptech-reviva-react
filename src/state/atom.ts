@@ -16,3 +16,8 @@ export const cartState = atom<Product[]>({
   key: 'cartState',
   default: []
 })
+
+export const subtotalState = atom({
+  key: 'subtotalState',
+  default: 0
+})

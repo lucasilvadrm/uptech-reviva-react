@@ -1,4 +1,3 @@
-import { RecoilRoot, useRecoilValue } from "recoil";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Main from "../../components/Main";
@@ -42,10 +41,8 @@ export default function Carrinho() {
   }
   ];
 
-  // const teste = useRecoilValue(storageState);
-
   return (
-    <RecoilRoot>
+    <>
       <Header />
       <Navbar />
       <Main>
@@ -53,6 +50,6 @@ export default function Carrinho() {
         <Wallet cart={cartTemp} />
       </Main>
       <Footer />
-    </RecoilRoot>
+    </>
   );
 }

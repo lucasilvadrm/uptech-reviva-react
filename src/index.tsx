@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <RecoilRoot>
-      <Home />
+      <Carrinho />
     </RecoilRoot>
   </React.StrictMode>
 );
