@@ -1,7 +1,7 @@
 import { useRecoilValue } from 'recoil';
 import { formatarPreco } from '../../../../functions';
-import { subtotalState } from '../../../../state/atom';
-import { Product } from '../../../../types/product';
+import { subtotalState } from 'state/atom';
+import { Product } from 'types/product';
 import styles from './CartTotal.module.scss';
 
 interface Props {

@@ -1,5 +1,5 @@
 import { formatarPreco } from '../../functions';
-import { Product } from '../../types/product';
+import { Product } from 'types/product';
 import { Button } from '../Button';
 import { ProductSize } from '../ProductSize';
 import style from './Products.module.scss';

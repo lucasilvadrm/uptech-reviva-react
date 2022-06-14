@@ -1,15 +1,15 @@
 import { useEffect } from "react";
 import { RecoilRoot, useRecoilState } from "recoil";
-import Banner from "../../components/Banner";
-import Blog from "../../components/Blog";
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import Main from "../../components/Main";
-import Navbar from "../../components/Nav";
-import { Products } from "../../components/Products";
-import Search from "../../components/Search";
-import { cartState, storageState } from "../../state/atom";
-import { Product } from "../../types/product";
+import Banner from "components/Banner";
+import Blog from "components/Blog";
+import Footer from "components/Footer";
+import Header from "components/Header";
+import Main from "components/Main";
+import Navbar from "components/Nav";
+import { Products } from "components/Products";
+import Search from "components/Search";
+import { cartState, storageState } from "state/atom";
+import { Product } from "types/product";
 
 
 export default function Home() {

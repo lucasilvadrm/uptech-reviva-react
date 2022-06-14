@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
-import { useRecoilState } from 'recoil';
-import { ProductSize } from '../../../../../components/ProductSize';
+import { ProductSize } from 'components/ProductSize';
 import { formatarPreco } from '../../../../../functions';
-import { subtotalState } from '../../../../../state/atom';
-import { Product } from '../../../../../types/product';
+import { Product } from 'types/product';
 import styles from './ProductItem.module.scss';
 
 interface Props {
@@ -15,7 +13,6 @@ export const ProductItem = ({ itemCart }: Props) => {
   const [quantityValue, setQuantityValue] = useState(itemCart.quantidade_carrinho);
   const [subtotal, setSubtotal] = useState((itemCart.preco * itemCart.quantidade_carrinho));
   // const [subtotal, setSubtotal] = useRecoilState(subtotalState);
-
 
   useEffect(() => {
     setSubtotal(quantityValue * itemCart.preco);

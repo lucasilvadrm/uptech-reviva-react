@@ -1,4 +1,4 @@
-import { Product } from '../../../types/product';
+import { Product } from 'types/product';
 import styles from './Wallet.module.scss';
 import { WalletList } from './ProductsInCart';
 import { CartTotal } from './CartTotal';

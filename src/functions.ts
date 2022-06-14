@@ -1,4 +1,4 @@
-import { Product } from "./types/product";
+import { Product } from "types/product";
 
 export function formatarPreco(preco: number, exibirMoeda: boolean): string {
     if (exibirMoeda) {
