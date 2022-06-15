@@ -4,10 +4,10 @@ import Main from "components/Main";
 import Navbar from "components/Nav";
 import Search from "components/Search";
 import { Product } from "types/product";
-import './Carrinho.module.scss';
+import './Cart.module.scss';
 import { Wallet } from "./Wallet";
 
-export default function Carrinho() {
+export default function Cart() {
 
   const cartTemp: Product[] = [{
     id: 1,

@@ -6,5 +6,5 @@ interface Props {
 }
 
 export const PageTemplate = ({ title, children }: Props) => {
-
+  
 }
