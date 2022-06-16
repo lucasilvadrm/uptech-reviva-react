@@ -1,5 +1,5 @@
 import { atom } from "recoil";
-import { storage } from "pages/Home/data";
+import { storage } from "data/storage";
 import { Product } from "types/product";
 
 export const postsState = atom({

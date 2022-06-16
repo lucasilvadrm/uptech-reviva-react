@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RecoilRoot } from 'recoil';
-import Cart from 'pages/Cart';
-import Home from 'pages/Home';
+import Router from './routes';
 
 
 const root = ReactDOM.createRoot(
@@ -11,7 +10,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <RecoilRoot>
-      <Home />
+      <Router />
     </RecoilRoot>
   </React.StrictMode>
 );

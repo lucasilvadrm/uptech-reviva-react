@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.product-list {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.product-list__title {
+  font-weight: 700;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: $tertiary-color;
+}
+
+.product-list__list {
+  display: grid;
+  gap: 8rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 988px) {
+  .product-list__list {
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 386px) {
+  .product-list__list {
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+}

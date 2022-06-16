@@ -10,11 +10,11 @@ export const WalletList = ({ products }: Props) => {
 
   return (
     <ul className={styles.wallet__list}>
-      {products?.map(item => {
+      {products ? products.map(item => {
         return (
           <ProductItem key={item.descricao} itemCart={item} />
         );
-      })}
+      }) : <ul></ul>}
     </ul>
   );
 }

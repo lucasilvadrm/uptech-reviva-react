@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ProductSize } from 'components/ProductSize';
-import { formatarPreco } from '../../../../../functions';
+import { formatarPreco } from 'functions';
 import { Product } from 'types/product';
 import styles from './ProductItem.module.scss';
 
@@ -12,11 +12,10 @@ export const ProductItem = ({ itemCart }: Props) => {
 
   const [quantityValue, setQuantityValue] = useState(itemCart.quantidade_carrinho);
   const [subtotal, setSubtotal] = useState((itemCart.preco * itemCart.quantidade_carrinho));
-  // const [subtotal, setSubtotal] = useRecoilState(subtotalState);
 
   useEffect(() => {
     setSubtotal(quantityValue * itemCart.preco);
-  }, [quantityValue])
+  }, [quantityValue, itemCart.preco]);
 
   return (
     <li className={styles.wallet__item}>
