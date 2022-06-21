@@ -2,6 +2,7 @@ import { Product } from "types/product";
 import ThumbList from "../ThumbList";
 import { ProductSize } from "components/ProductSize";
 import { ProductButton, ProductDescription, ProductDetails, ProductTitle } from "./styles";
+import { formactPrice } from "functions";
 
 interface PropsProduct {
   product: Product
@@ -10,7 +11,7 @@ interface PropsProduct {
 export default ({ product }: PropsProduct) => {
   return (
     <ProductDetails>
-      <ProductTitle>{`${product.nome}, ${product.preco}`}</ProductTitle>
+      <ProductTitle>{`${product.nome}, ${formactPrice(product.preco)}`}</ProductTitle>
       <ProductDescription>{product.descricao}</ProductDescription>
       <ThumbList id={product.id} />
       <div>

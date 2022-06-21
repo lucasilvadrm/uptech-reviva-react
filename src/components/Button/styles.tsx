@@ -2,6 +2,10 @@ import { tertiaryColor } from "components/UI/variables";
 import styled, { css } from "styled-components";
 
 export const GenericButton = styled.button`
+  width: 100%;
+  height: 4rem;
+  color: white;
+  font-size: 1.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,22 +20,15 @@ export const StyledButton = styled(GenericButton)`
 ${({ quantity }: IQuantityStorage) => {
     if (quantity === 0) {
       return css`
-        width: 100%;
-        height: 4rem;
-        font-size: 1.3rem;
         background-color: #a5a2a2;
-        color: white;
+        transition: 1s;
         i {
           display: none;
         }
     `;
     }
     return css`
-      width: 100%;
-      height: 4rem;
-      font-size: 1.3rem;
       background-color: ${tertiaryColor};
-      color: white;
       i {
         font-size: 2rem;
         padding-right: .5rem;
@@ -41,11 +38,4 @@ ${({ quantity }: IQuantityStorage) => {
   `;
   }}
   
-`;
-
-export const ProductButtonTeste = styled(GenericButton)`
-  width: 30%;
-  height: 4rem;
-  font-size: 1.3rem;
-  background-color: ${tertiaryColor};
 `;
