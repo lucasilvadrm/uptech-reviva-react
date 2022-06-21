@@ -8,12 +8,6 @@ export const GenericButton = styled.button`
   position: relative;
 `;
 
-// interface IButton {
-//   width: number,
-//   height: number,
-//   fontSize: number,
-// }
-
 interface IQuantityStorage {
   quantity?: number
 }
