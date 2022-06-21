@@ -1,15 +1,16 @@
-import style from './Button.module.scss';
+import { StyledButton } from './styles';
 
 interface Props {
-    onClick: () => void,
-    label: string
+  onClick: () => void,
+  children?: React.ReactNode,
+  quantity?: number
 }
 
-export function Button( { onClick, label }: Props) {
-    return (
-        <button className={style.item__button} onClick={onClick}>
-            {label}
-            <i className={`fa-solid fa-bag-shopping ${style.icon__purchase}`}></i>
-        </button>
-    )
+export function Button({ onClick, children, quantity }: Props) {
+  return (
+    <StyledButton quantity={quantity} onClick={onClick}>
+      {children}
+      <i className={`fa-solid fa-bag-shopping`}></i>
+    </StyledButton>
+  )
 }

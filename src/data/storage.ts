@@ -10,6 +10,7 @@ export const storage: Product[] = [{
     tamanhos_disponiveis: ['P', 'M', 'G'],
     quantidade_disponivel: 10,
     quantidade_carrinho: 0,
+    
     imagens: [{
         url: 'images/products/lancamento-1.png',
         descricao: 'Imagem grande de uma Camisa Cropped Feminina'
@@ -51,15 +52,15 @@ export const storage: Product[] = [{
         descricao: 'Imagem pequena de uma Blusa Cropped Feminina Manga Longa Stranger Things Bege'
     },
     {
-        url: 'images/products/lancamento-2-part2.png',
+        url: 'images/products/lancamento-2-part2.jpg',
         descricao: 'Imagem pequena de uma Blusa Cropped Feminina Manga Longa Stranger Things Bege'
     },
     {
-        url: 'images/products/lancamento-2-part3.png',
+        url: 'images/products/lancamento-2-part3.jpg',
         descricao: 'Imagem pequena de uma Blusa Cropped Feminina Manga Longa Stranger Things Bege'
     },
     {
-        url: 'images/products/lancamento-2-part4.png',
+        url: 'images/products/lancamento-2-part4.jpg',
         descricao: 'Imagem pequena de uma Blusa Cropped Feminina Manga Longa Stranger Things Bege'
     }
     ]
@@ -83,15 +84,15 @@ export const storage: Product[] = [{
         descricao: 'Imagem pequena de Vestido Midi Feminino Evasê Uma Maria Floral Preto Pool'
     },
     {
-        url: 'images/products/lancamento-3-part2.png',
+        url: 'images/products/lancamento-3-part2.jpg',
         descricao: 'Imagem pequena de Vestido Midi Feminino Evasê Uma Maria Floral Preto Pool'
     },
     {
-        url: 'images/products/lancamento-3-part3.png',
+        url: 'images/products/lancamento-3-part3.jpg',
         descricao: 'Imagem pequena de Vestido Midi Feminino Evasê Uma Maria Floral Preto Pool'
     },
     {
-        url: 'images/products/lancamento-3-part4.png',
+        url: 'images/products/lancamento-3-part4.jpg',
         descricao: 'Imagem pequena de Vestido Midi Feminino Evasê Uma Maria Floral Preto Pool'
     }
     ]

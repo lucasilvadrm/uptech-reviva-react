@@ -1,15 +1,16 @@
-import style from './Nav.module.scss';
+import { NavItem } from './NavItem';
+import { Menu, MenuList } from './styles';
 
 export default function Navbar() {
-    return (
-        <nav className={style.menu}>
-            <ul className={style.menu__list}>
-                <li className={style.menu__item}><a href="#">Página Inicial</a></li>
-                <li className={style.menu__item}><a href="#">Moda Masculina</a></li>
-                <li className={style.menu__item}><a href="#">Moda Feminina</a></li>
-                <li className={style.menu__item}><a href="#">Moda Infantil</a></li>
-                <li className={style.menu__item}><a href="#">Manual de Moda</a></li>
-            </ul>
-        </nav>
-    )
+  return (
+    <Menu>
+      <MenuList>
+        <NavItem to='/'>Página Inicial</NavItem>
+        <NavItem to='/'>Moda Masculina</NavItem>
+        <NavItem to='/'>Moda Feminina</NavItem>
+        <NavItem to='/'>Moda Infantil</NavItem>
+        <NavItem to='/'>Manual de Moda</NavItem>
+      </MenuList>
+    </Menu>
+  )
 }

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { ProductSize } from 'components/ProductSize';
-import { formatarPreco } from 'functions';
+import { formactPrice } from 'functions';
 import { Product } from 'types/product';
-import styles from './ProductItem.module.scss';
+import { DetailThumb, Name, Description, WalletItem, DetailInput } from './styles';
 
 interface Props {
   itemCart: Product;
@@ -18,27 +18,26 @@ export const ProductItem = ({ itemCart }: Props) => {
   }, [quantityValue, itemCart.preco]);
 
   return (
-    <li className={styles.wallet__item}>
-      <div className={styles.detail__thumb}>
+    <WalletItem>
+      <DetailThumb>
         <img src={itemCart.imagens[0].url} alt={itemCart.imagens[0].descricao} />
+      </DetailThumb>
+      <div>
+        <Name>Produto</Name>
+        <Description>{itemCart.nome}</Description>
       </div>
-      <div className={styles.detail__name}>
-        <h3 className={styles.detail__title}>Produto</h3>
-        <p className={styles.detail__description}>{itemCart.nome}</p>
-      </div>
-      <div className={styles.detail__size}>
-        <h3 className={styles.detail__title}>Tamanho escolhido</h3>
+      <div>
+        <Name>Tamanho escolhido</Name>
         <ProductSize item={itemCart} />
       </div>
-      <div className={styles.detail__price}>
-        <h3 className={styles.detail__title}>Valor</h3>
-        <p className={styles.detail__value}>{`${formatarPreco(itemCart.preco, true)}`}</p>
+      <div>
+        <Name>Valor</Name>
+        <Description>{`${formactPrice(itemCart.preco)}`}</Description>
       </div>
-      <div className={styles.detail__quantity}>
-        <h3 className={styles.detail__title}>Quantidade</h3>
-        <input
+      <div>
+        <Name>Quantidade</Name>
+        <DetailInput
           onChange={(e) => setQuantityValue(Number(e.target.value))}
-          className={styles.detail__input}
           type="number"
           name={`quantity${itemCart.id}`}
           id={`quantity${itemCart.id}`}
@@ -47,10 +46,10 @@ export const ProductItem = ({ itemCart }: Props) => {
           max={itemCart.quantidade_disponivel}
         />
       </div>
-      <div className={styles.detail__subtotal}>
-        <h3 className={styles.detail__title}>Subtotal</h3>
-        <p className={styles.detail__value}>{formatarPreco(subtotal, true)}</p>
+      <div>
+        <Name>Subtotal</Name>
+        <Description>{formactPrice(subtotal)}</Description>
       </div>
-    </li>
+    </WalletItem>
   )
 } 

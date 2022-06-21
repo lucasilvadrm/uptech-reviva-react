@@ -1,14 +1,14 @@
-import style from './Logo.module.scss';
+import { LogoSubtitle, LogoTitle, StyledLogo } from './styles';
 
 interface Props {
-    classes?: string
+  mode?: string
 }
 
-export default function Logo({ classes }: Props) {
-    return (
-        <div className={`${style.logo} ${classes}`}>
-            <h1 className={style.logo__title}>Reviva Fashion</h1>
-            <span className={style.logo__subtitle}>by RCHLO</span>
-        </div>
-    )
+export default function Logo({ mode }: Props) {
+  return (
+    <StyledLogo mode={mode}>
+      <LogoTitle>Reviva Fashion</LogoTitle>
+      <LogoSubtitle>by RCHLO</LogoSubtitle>
+    </StyledLogo>
+  )
 }

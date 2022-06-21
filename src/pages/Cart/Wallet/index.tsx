@@ -1,16 +1,16 @@
-import styles from './Wallet.module.scss';
-import { WalletList } from './ProductsInCart';
-import { CartTotal } from './CartTotal';
+import WalletList from './ProductsInCart';
+import CartTotal from './CartTotal';
 import { useRecoilValue } from 'recoil';
 import { cartState } from 'state/atom';
+import { StyledWallet, WalletTitle } from './styles';
 
 export const Wallet = () => {
   const cart = useRecoilValue(cartState);
   return (
-    <section className={styles.wallet}>
-      <h2 className={styles.wallet__title}>Minha Sacola</h2>
+    <StyledWallet>
+      <WalletTitle>Minha Sacola</WalletTitle>
       <CartTotal cart={cart} />
       <WalletList products={cart} />
-    </section>
+    </StyledWallet>
   );
 }

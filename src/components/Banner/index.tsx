@@ -8,7 +8,7 @@ export default function Banner() {
                 Fique por dentro de tudo que há de novidade no mundo da moda!
                 <br></br>Baixe já nosso manual de moda!
             </p>
-            <Logo classes={style.banner__logo} />
+            <Logo mode='banner' />
         </a>
     )
 }

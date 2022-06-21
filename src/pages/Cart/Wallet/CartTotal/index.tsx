@@ -1,35 +1,32 @@
-import { useRecoilValue } from 'recoil';
-import { formatarPreco } from 'functions';
-import { subtotalState } from 'state/atom';
+import { formactPrice } from 'functions';
 import { Product } from 'types/product';
-import styles from './CartTotal.module.scss';
+import { CartTotal, QuantityPrice, Total, TotalTitle, TotalValue, WalletButton } from './styles';
 
 interface Props {
   cart: Product[]
 }
 
-export const CartTotal = ({ cart }: Props) => {
-  const subTotal = useRecoilValue(subtotalState);
+export default ({ cart }: Props) => {
+  // const subTotal = useRecoilValue(subtotalState);
 
-  console.log('teste subtotal', subTotal);
   return (
-    <article className={styles['cart-total']}>
-      <div className={styles.total}>
-        <h3 className={styles.total__title}>Total</h3>
-        <p className={styles.total__value}>R$ 0,00</p>
-      </div>
-      <ul className={styles['quantity-price']}>
+    <CartTotal>
+      <Total>
+        <TotalTitle>Total</TotalTitle>
+        <TotalValue>R$ 0,00</TotalValue>
+      </Total>
+      <QuantityPrice>
         {cart.map(item => {
           return (
             <li key={item.id}>
-              <p>{`${item.quantidade_carrinho.toString()} x ${formatarPreco(item.preco, true)}`}</p>
+              <p>{`${item.quantidade_carrinho.toString()} x ${formactPrice(item.preco)}`}</p>
             </li>
           );
         })}
-      </ul>
-      <button className={styles.wallet__button}>
+      </QuantityPrice>
+      <WalletButton>
         Ir para pagamento
-      </button>
-    </article>
+      </WalletButton>
+    </CartTotal>
   );
 } 

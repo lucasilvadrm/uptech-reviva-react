@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { RecoilRoot, useRecoilState } from "recoil";
+import { useRecoilState } from "recoil";
 import Banner from "components/Banner";
 import Blog from "components/Blog";
 import { ProductList } from "components/ProductList";
@@ -11,14 +10,7 @@ export default function Home() {
   const [products, setUpdateStorage] = useRecoilState(storageState);
   const [cart, setUpdateCart] = useRecoilState(cartState);
 
-  useEffect(() => {
-    console.log(cart);
-    console.log(products);
-  }, [cart, products]);
-
-  function addCart(item: Product): void {
-    const productInCart = cart.find(product => product.id === item.id);
-
+  function decrementStorage(item: Product) {
     const updatedProducts = products.map(product => {
       if (product.id === item.id) {
         return { ...product, quantidade_disponivel: product.quantidade_disponivel - 1 }
@@ -26,9 +18,15 @@ export default function Home() {
       return product;
     })
 
+    setUpdateStorage(updatedProducts);
+  }
+
+  function addCart(item: Product): void {
+    const productInCart = cart.find(product => product.id === item.id);
+
     if (!productInCart) {
       setUpdateCart([...cart, { ...item, quantidade_carrinho: 1 }]);
-      return setUpdateStorage(updatedProducts);
+      return decrementStorage(item);
     }
 
     if (productInCart.quantidade_carrinho < productInCart.quantidade_disponivel) {
@@ -41,12 +39,13 @@ export default function Home() {
         }
       ]);
 
-      return setUpdateStorage(updatedProducts);
+      return decrementStorage(item);
     }
   }
 
+  console.log(products);
   return (
-    <RecoilRoot>
+    <>
       <ProductList
         addCart={addCart}
         tag={'releases'}
@@ -59,6 +58,6 @@ export default function Home() {
         title='Coleção Verão'
       />
       <Blog />
-    </RecoilRoot>
+    </>
   )
 }

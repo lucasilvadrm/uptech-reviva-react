@@ -6,13 +6,13 @@ import Newsletter from './Newsletter';
 import SocialMedia from './SocialMedia';
 
 export default function Footer() {
-    return (
-        <footer className={style.footer}>
-            <Logo classes={style['logo--justify']} />
-            <MenuItem />
-            <SocialMedia />
-            <Contact />
-            <Newsletter />
-        </footer>
-    )
+  return (
+    <footer className={style.footer}>
+      <Logo mode='footer' />
+      <MenuItem />
+      <SocialMedia />
+      <Contact />
+      <Newsletter />
+    </footer>
+  )
 }

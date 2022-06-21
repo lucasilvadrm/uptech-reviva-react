@@ -11,5 +11,5 @@ export interface Product {
     quantidade_disponivel: number,
     quantidade_carrinho: number,
     imagens: Imagem[],
-    thumbnail?: Imagem[]
+    thumbnail: Imagem[]
 }
