@@ -43,10 +43,6 @@ ${({ quantity }: IQuantityStorage) => {
   
 `;
 
-export const IconPurschase = styled.i`
-
-`;
-
 export const ProductButtonTeste = styled(GenericButton)`
   width: 30%;
   height: 4rem;
