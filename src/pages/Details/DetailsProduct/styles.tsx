@@ -50,3 +50,7 @@ export const ProductButton = styled.button`
     right: 0;
   }
 `;
+
+export const ContainerBtnSize = styled.div`
+  width: 30%;
+`;

@@ -12,11 +12,11 @@ export const fontSizelogoTitle = `3rem`;
 export const fontSizelogoSubtitle = `1rem`;
 
 //breakpoints
-export const sm = `${576}px`;
-export const md = `${768}px`;
-export const lg = `${992}px`;
-export const xl = `${1200}px`;
-export const xxl = `${1400}px`;
+export const sm = `576px`;
+export const md = `768px`;
+export const lg = `992px`;
+export const xl = `1200px`;
+export const xxl = `1400px`;
 
 //width
-export const widthMain = '1280px';
+export const widthMain = '1400px';

@@ -116,15 +116,15 @@ export const storage: Product[] = [{
         descricao: 'Imagem pequena de Saia Midi Feminina Evasê Floral Preto'
     },
     {
-        url: 'images/products/lancamento-4-part2.png',
+        url: 'images/products/lancamento-4-part2.jpg',
         descricao: 'Imagem pequena de Saia Midi Feminina Evasê Floral Preto'
     },
     {
-        url: 'images/products/lancamento-4-part3.png',
+        url: 'images/products/lancamento-4-part3.jpg',
         descricao: 'Imagem pequena de Saia Midi Feminina Evasê Floral Preto'
     },
     {
-        url: 'images/products/lancamento-4-part4.png',
+        url: 'images/products/lancamento-4-part4.jpg',
         descricao: 'Imagem pequena de Saia Midi Feminina Evasê Floral Preto'
     }
     ]

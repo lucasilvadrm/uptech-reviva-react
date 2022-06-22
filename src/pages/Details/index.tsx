@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import ProductDetails from './DetailsProduct'
 import { ProductList } from "components/ProductList";
 import { useEffect } from "react";
+import Banner from "components/Banner";
 
 
 const DetailsPage = () => {
@@ -34,10 +35,11 @@ const DetailsPage = () => {
     <>
       <Product>
         <ProductImage>
-          <img src={`${process.env.PUBLIC_URL}/${images.imageUrl}`} alt={images.description} />
+          <img src={`../${images.imageUrl}`} alt={images.description} />
         </ProductImage>
         <ProductDetails product={product} />
       </Product>
+      <Banner />
       <ProductList
         addCart={() => console.log('clicou')}
         title={`Quem viu ${product.nome} também comprou...`}

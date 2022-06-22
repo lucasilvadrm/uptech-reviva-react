@@ -1,14 +1,14 @@
 import { ReactElement } from 'react';
-import style from './Main.module.scss';
+import { StyledMain } from './styles';
 
 interface Props {
-    children?: ReactElement | ReactElement[]
+  children?: ReactElement | ReactElement[]
 }
 
 export default function Main({ children }: Props) {
-    return (
-        <main className={style.container}>
-          {children}
-        </main>
-    );
+  return (
+    <StyledMain>
+      {children}
+    </StyledMain>
+  );
 }

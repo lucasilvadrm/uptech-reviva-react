@@ -25,7 +25,7 @@ export default ({ item, addCart }: PropsProductItem) => {
       <ItemDetails>
         <img
           onClick={() => redirectDetail(item)}
-          src={`${process.env.PUBLIC_URL}/${imagens[0].url}`}
+          src={`../${imagens[0].url}`}
           alt={imagens[0].descricao}
         />
         <ProductSize item={item} />

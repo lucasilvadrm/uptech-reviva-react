@@ -45,7 +45,6 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.25",
-    "sass": "^1.52.1",
     "typescript-plugin-css-modules": "^3.4.0"
   }
 }

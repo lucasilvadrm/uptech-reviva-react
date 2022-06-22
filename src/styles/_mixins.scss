@@ -1,9 +1,0 @@
-@import './variables';
-@import './base';
-
-@mixin properties ($width, $heigth, $font-size, $background) {
-    width: $width;
-    height: $heigth;
-    font-size: $font-size;
-    background-color: $background;
-}

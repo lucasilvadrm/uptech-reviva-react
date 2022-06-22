@@ -1,21 +1,22 @@
-import style from './Contact.module.scss';
+import { Title } from '../styles';
+import * as S from './styles';
 
 export default function Contact() {
-    return (
-        <div className={style.contact}>
-            <h4 className={style.contact__title}>Entre e contato</h4>
-            <ul className={style.contact__items}>
-                <li className={style.contact__item}>Contato</li>
-                <li className={style.contact__item}><a href="#">reviva@rchio.com.br</a></li>
-                <li className={`${style.contact__item} ${style.whatsapp__content}`}>
-                    <a href="#">WhatsApp</a>
-                    <i aria-label="icone whatsapp" className="fa-brands fa-whatsapp whatsapp__icon"></i>
-                </li>
-                <li className={`${style.contact__item} ${style.phone__content}`}>
-                    <a className={style.phone__number} href="#">11 2123-3321</a>
-                    <i aria-label="ícone telefone" className="fa-solid fa-phone phone__icon"></i>
-                </li>
-            </ul>
-        </div>
-    );
+  return (
+    <S.StyledContact>
+      <Title>Entre e contato</Title>
+      <ul>
+        <S.ContactItem>Contato</S.ContactItem>
+        <S.ContactItem><a href="/">reviva@rchio.com.br</a></S.ContactItem>
+        <S.ContactItem>
+          <a href="https://web.whatsapp.com/">WhatsApp</a>
+          <i aria-label="icone whatsapp" className="fa-brands fa-whatsapp"></i>
+        </S.ContactItem>
+        <S.ContactItem>
+          <a href="/">11 2123-3321</a>
+          <i aria-label="ícone telefone" className="fa-solid fa-phone"></i>
+        </S.ContactItem>
+      </ul>
+    </S.StyledContact>
+  );
 }

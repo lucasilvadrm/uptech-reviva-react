@@ -15,7 +15,7 @@ export const Product = styled.section`
 export const ProductImage = styled.div`
   border: .1rem solid #C4C4C4;
   margin-right: 2rem;
-  width: 40%;
+  max-width: 33%;
   justify-content: center;
   display: flex;
 

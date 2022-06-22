@@ -1,14 +1,18 @@
+import { Link } from 'react-router-dom';
 import Logo from '../Logo';
-import style from './Banner.module.scss';
+import * as S from './styles';
 
 export default function Banner() {
-    return (
-        <a href="#" className={style.banner}>
-            <p className={style.banner__text}>
-                Fique por dentro de tudo que há de novidade no mundo da moda!
-                <br></br>Baixe já nosso manual de moda!
-            </p>
-            <Logo mode='banner' />
-        </a>
-    )
+  return (
+    <Link to={'/'}>
+      <S.StyledBanner>
+        <S.BannerText>
+          Fique por dentro de tudo que há de novidade no mundo da moda!
+          <br></br>Baixe já nosso manual de moda!
+        </S.BannerText>
+        <Logo mode='banner' />
+      </S.StyledBanner>
+    </Link>
+
+  )
 }

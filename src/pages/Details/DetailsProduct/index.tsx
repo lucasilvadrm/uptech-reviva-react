@@ -1,8 +1,9 @@
 import { Product } from "types/product";
 import ThumbList from "../ThumbList";
 import { ProductSize } from "components/ProductSize";
-import { ProductButton, ProductDescription, ProductDetails, ProductTitle } from "./styles";
+import { ContainerBtnSize, ProductDescription, ProductDetails, ProductTitle } from "./styles";
 import { formactPrice } from "functions";
+import { Button } from "components/Button";
 
 interface PropsProduct {
   product: Product
@@ -14,13 +15,12 @@ export default ({ product }: PropsProduct) => {
       <ProductTitle>{`${product.nome}, ${formactPrice(product.preco)}`}</ProductTitle>
       <ProductDescription>{product.descricao}</ProductDescription>
       <ThumbList id={product.id} />
-      <div>
+      <ContainerBtnSize>
         <ProductSize item={product} />
-        <ProductButton>
+        <Button onClick={() => {}}>
           POR NA SACOLA
-          <i aria-label="ícone sacola de compras" className="fa-solid fa-bag-shopping icon__purchase"></i>
-        </ProductButton>
-      </div>
+        </Button>
+      </ContainerBtnSize>
     </ProductDetails>
   );
 }

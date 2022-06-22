@@ -10,7 +10,7 @@ export default ({ thumbItem }: Props) => {
   return (
     <ThumbItem>
       <ThumbProduct
-        src={`${process.env.PUBLIC_URL}/${thumbItem.url}`}
+        src={`../${thumbItem.url}`}
         alt={thumbItem.descricao} />
     </ThumbItem>
   )
