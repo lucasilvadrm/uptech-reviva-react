@@ -2,34 +2,31 @@ import { cartState } from "state/atom";
 import { Link } from "react-router-dom";
 import { useRecoilValue } from "recoil";
 import Logo from "../Logo";
-import { ContainerIcon, IconHeader, QuantityCart, StyledHeader } from "./styles";
+import * as S from "./styles";
+import { quantityCartTotal } from "functions";
 
 export default function Header() {
-  const routes = {
-    to: '/cart'
-  }
 
   const cart = useRecoilValue(cartState);
 
-  const quantity__cart = cart.map(itemCart => itemCart.quantidade_carrinho)
-    .reduce((acm, atual) => acm + atual, 0);
+  const quantity__cart = quantityCartTotal(cart);
 
   return (
-    <StyledHeader>
+    <S.StyledHeader>
       <Link to={'/'}>
         <Logo />
       </Link>
-      <Link to={routes.to}>
-        <ContainerIcon>
-          <IconHeader
+      <Link to={'/cart'}>
+        <S.ContainerIcon>
+          <S.IconHeader
             aria-label="ícone sacola de compras"
             className={`fa-solid fa-bag-shopping`} >
-          </IconHeader>
-          <QuantityCart quantity={quantity__cart}>
+          </S.IconHeader>
+          <S.QuantityCart quantity={quantity__cart}>
             {quantity__cart}
-          </QuantityCart>
-        </ContainerIcon>
+          </S.QuantityCart>
+        </S.ContainerIcon>
       </Link>
-    </StyledHeader>
+    </S.StyledHeader>
   )
 }
