@@ -1,15 +1,14 @@
 import WalletList from './ProductsInCart';
 import CartTotal from './CartTotal';
-import { useRecoilValue } from 'recoil';
-import { cartState } from 'state/atom';
 import { StyledWallet, WalletTitle } from './styles';
+import { useCart } from 'contexts/CartContext';
 
 export const Wallet = () => {
-  const cart = useRecoilValue(cartState);
+  const { cart } = useCart();
   return (
     <StyledWallet>
       <WalletTitle>Minha Sacola</WalletTitle>
-      <CartTotal cart={cart} />
+      <CartTotal />
       <WalletList products={cart} />
     </StyledWallet>
   );

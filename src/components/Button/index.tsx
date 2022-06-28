@@ -8,7 +8,7 @@ interface Props {
 
 export function Button({ onClick, children, quantity }: Props) {
   return (
-    <StyledButton quantity={quantity} onClick={onClick}>
+    <StyledButton data-testid='test-button' disabled={quantity === 0} quantity={quantity} onClick={onClick}>
       {children}
       <i className={`fa-solid fa-bag-shopping`}></i>
     </StyledButton>

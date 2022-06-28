@@ -1,3 +1,4 @@
+import { useCart } from 'contexts/CartContext';
 import { formactPrice } from 'functions';
 import { Product } from 'types/product';
 import { CartTotal, QuantityPrice, Total, TotalTitle, TotalValue, WalletButton } from './styles';
@@ -6,14 +7,15 @@ interface Props {
   cart: Product[]
 }
 
-export default ({ cart }: Props) => {
-  // const subTotal = useRecoilValue(subtotalState);
+export default () => {
+
+  const { cart, totalCart } = useCart();
 
   return (
     <CartTotal>
       <Total>
         <TotalTitle>Total</TotalTitle>
-        <TotalValue>R$ 0,00</TotalValue>
+        <TotalValue>{totalCart()}</TotalValue>
       </Total>
       <QuantityPrice>
         {cart.map(item => {

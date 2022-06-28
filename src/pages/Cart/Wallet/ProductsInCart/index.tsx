@@ -7,7 +7,6 @@ interface Props {
 }
 
 export default ({ products }: Props) => {
-
   return (
     <WalletList>
       {products ? products.map(item => {

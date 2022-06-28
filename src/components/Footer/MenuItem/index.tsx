@@ -1,4 +1,4 @@
-import { itemsNav } from 'data/itemsNav';
+import { itemsNav } from 'components/Nav/NavItem/itemsNav';
 import { Link } from 'react-router-dom';
 import { Title } from '../styles';
 import * as S from './styles';

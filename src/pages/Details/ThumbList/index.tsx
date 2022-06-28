@@ -1,8 +1,6 @@
-import { storageState } from "state/atom";
-import { useRecoilValue } from "recoil";
 import ThumbItem from 'pages/Details/ThumbItem';
 import { ThumbList } from './styles';
-
+import { useProduct } from "contexts/ProductsContext";
 
 interface Props {
   id: number;
@@ -10,13 +8,16 @@ interface Props {
 
 export default ({ id }: Props) => {
 
-  const products = useRecoilValue(storageState);
+  const { products } = useProduct();
   const thumbnails = products.find(product => product.id === id)?.thumbnail;
 
   return (
     <ThumbList>
       {thumbnails?.map((thumb, index) =>
-        <ThumbItem thumbItem={thumb} key={index} />
+        <ThumbItem
+          thumbItem={thumb}
+          key={index}
+        />
       )}
     </ThumbList>
   );

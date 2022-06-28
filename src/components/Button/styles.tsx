@@ -20,6 +20,7 @@ export const StyledButton = styled(GenericButton)`
 ${({ quantity }: IQuantityStorage) => {
     if (quantity === 0) {
       return css`
+      cursor: none;
         background-color: #a5a2a2;
         transition: 1s;
         i {

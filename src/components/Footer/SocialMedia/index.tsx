@@ -1,4 +1,4 @@
-import { icons } from 'components/Footer/icons';
+import { icons } from 'components/Footer/SocialMedia/icons';
 import { Title } from '../styles';
 import { ItemsMedia } from './Items';
 import * as S from './styles';

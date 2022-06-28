@@ -1,16 +1,15 @@
-import { storageState } from "state/atom";
-import { useRecoilValue } from "recoil";
 import { Product, ProductImage } from './styles';
 import { useParams } from 'react-router-dom';
 import ProductDetails from './DetailsProduct'
 import { ProductList } from "components/ProductList";
 import { useEffect } from "react";
 import Banner from "components/Banner";
+import { useProduct } from "contexts/ProductsContext";
 
 
 const DetailsPage = () => {
 
-  const products = useRecoilValue(storageState);
+  const { products } = useProduct();
   const { id } = useParams();
   const product = products.find(product => product.id === Number(id));
 
@@ -41,7 +40,6 @@ const DetailsPage = () => {
       </Product>
       <Banner />
       <ProductList
-        addCart={() => console.log('clicou')}
         title={`Quem viu ${product.nome} também comprou...`}
         random={true}
       />

@@ -1,4 +1,4 @@
-import { itemsNav } from 'data/itemsNav';
+import { itemsNav } from 'components/Nav/NavItem/itemsNav';
 import { NavItem } from './NavItem';
 import { Menu, MenuList } from './styles';
 

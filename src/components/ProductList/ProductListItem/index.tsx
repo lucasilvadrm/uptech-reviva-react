@@ -4,21 +4,28 @@ import { formactPrice } from "functions";
 import { Product } from "types/product";
 import { useNavigate } from 'react-router-dom';
 import { ProductListItem, ItemDetails, ItemDescription, ItemPrice, ItemTitle } from './styles';
+import { useCart } from 'contexts/CartContext';
 
 interface PropsProductItem {
   item: Product,
-  addCart: (product: Product) => void,
 }
 
-export default ({ item, addCart }: PropsProductItem) => {
+export default ({ item }: PropsProductItem) => {
+
+  const { addProductInCart } = useCart();
 
   const navigate = useNavigate();
 
-  const { quantidade_disponivel, id, imagens, nome, preco } = item;
+  const { id, imagens, nome, preco, quantidade_carrinho, quantidade_disponivel } = item;
+
+  // const findProductCart = cart.find(itemCart => itemCart.id === item.id);
+  // const quantityCart = findProductCart?.quantidade_carrinho || 0;
 
   function redirectDetail(product: Product) {
     navigate(`/details/${product.id}`, { state: { product } });
   }
+
+  const verify = quantidade_carrinho === quantidade_disponivel
 
   return (
     <ProductListItem key={id}>
@@ -34,8 +41,8 @@ export default ({ item, addCart }: PropsProductItem) => {
         <ItemTitle>{nome}</ItemTitle>
         <ItemPrice>{formactPrice(preco)}</ItemPrice>
       </ItemDescription>
-      <Button quantity={quantidade_disponivel} onClick={() => addCart(item)}>
-        {quantidade_disponivel === 0 ? 'INDISPONÍVEL' : 'POR NA SACOLA'}
+      <Button quantity={item.quantidade_disponivel} onClick={() => addProductInCart(item)}>
+        {verify ? 'INDISPONÍVEL' : `POR NA SACOLA`}
       </Button>
     </ProductListItem>
   );
