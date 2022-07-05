@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MenuItens = styled.div`
   grid-area: menu-itens;
-  
+
   @media screen and (max-width: 794px) {
     display: flex;
     flex-direction: column;
@@ -20,4 +20,3 @@ export const MenuItem = styled.li`
   font-size: 1.8rem;
   color: black;
 `;
-

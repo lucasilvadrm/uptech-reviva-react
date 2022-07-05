@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { tertiaryColor, fourthColor } from 'components/UI/variables';
+import { tertiaryColor, fourthColor } from "styles/variables";
 
 export const StyledProductSize = styled.fieldset`
   border: none;
@@ -18,11 +18,11 @@ export const StyledProductSize = styled.fieldset`
 `;
 
 export const SizeLabel = styled.label`
-  border: solid .1rem ${tertiaryColor};
+  border: solid 0.1rem ${tertiaryColor};
   display: flex;
   justify-content: center;
   height: 2.7rem;
-  margin: .7rem;
+  margin: 0.7rem;
   width: 1.5em;
   color: ${tertiaryColor};
 
@@ -35,10 +35,9 @@ export const SizeLabel = styled.label`
 export const SizeInput = styled.input`
   display: none;
 
-  &:checked+${SizeLabel} {
+  &:checked + ${SizeLabel} {
     background-color: ${tertiaryColor};
     border: 1px solid;
     color: ${fourthColor};
   }
-
 `;

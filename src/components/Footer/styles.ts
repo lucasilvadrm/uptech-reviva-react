@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { secondaryColor, widthMain } from 'components/UI/variables';
+import { secondaryColor, widthMain } from "styles/variables";
 
 export const StyledFooter = styled.footer`
   border-top: 1px solid ${secondaryColor};

@@ -10,7 +10,6 @@ export const ContactItem = styled.li`
   color: black;
 
   i {
-    margin-left: .6rem;
+    margin-left: 0.6rem;
   }
 `;
-

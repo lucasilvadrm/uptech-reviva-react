@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { tertiaryColor } from 'components/UI/variables';
+import { tertiaryColor } from "styles/variables";
 
 export const StyledBlog = styled.section`
   width: 100%;
@@ -17,11 +17,11 @@ export const StyledBlog = styled.section`
     "article-big article-small--top"
     "article-big article-small--bottom";
 
-    @media screen and (max-width: 794px) {
-      display: flex;
-      flex-direction: column;
-      height: auto;
-    }
+  @media screen and (max-width: 794px) {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
 `;
 
 export const BlogTitle = styled.h2`
@@ -38,25 +38,24 @@ export const ArticleMain = styled.article`
 `;
 
 interface Position {
-  position: string
+  position: string;
 }
 
 export const Article = styled.article`
   display: flex;
   flex-direction: row;
   ${({ position }: Position) => {
-
     switch (position) {
-      case 'top':
+      case "top":
         return css`
           grid-area: article-small--top;
-        `
-      case 'bottom':
+        `;
+      case "bottom":
         return css`
           grid-area: article-small--bottom;
         `;
       default:
-        return
+        return;
     }
   }}
 `;
@@ -64,7 +63,7 @@ export const Article = styled.article`
 export const ContainerImageMain = styled.div`
   width: 100%;
   height: 40rem;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
   margin-bottom: 1rem;
 
   img {
@@ -74,7 +73,7 @@ export const ContainerImageMain = styled.div`
 `;
 
 export const ContainerImage = styled.div`
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
   min-width: 50%;
   margin-right: 1rem;
 

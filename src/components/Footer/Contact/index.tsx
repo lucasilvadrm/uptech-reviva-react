@@ -1,22 +1,33 @@
-import { Title } from '../styles';
-import * as S from './styles';
+import Link from "next/link";
+import { Title } from "../styles";
+import * as SC from "./styles";
 
-export default function Contact() {
+const Contact = () => {
   return (
-    <S.StyledContact>
+    <SC.StyledContact>
       <Title>Entre e contato</Title>
       <ul>
-        <S.ContactItem>Contato</S.ContactItem>
-        <S.ContactItem><a href="/">reviva@rchio.com.br</a></S.ContactItem>
-        <S.ContactItem>
-          <a href="https://web.whatsapp.com/">WhatsApp</a>
+        <SC.ContactItem>Contato</SC.ContactItem>
+        <SC.ContactItem>
+          <Link href={'/'}>
+            <a>reviva@rchio.com.br</a>
+          </Link>
+        </SC.ContactItem>
+        <SC.ContactItem>
+          <Link href={"https://web.whatsapp.com/"}>
+            <a>WhatsApp</a>
+          </Link>
           <i aria-label="icone whatsapp" className="fa-brands fa-whatsapp"></i>
-        </S.ContactItem>
-        <S.ContactItem>
-          <a href="/">11 2123-3321</a>
+        </SC.ContactItem>
+        <SC.ContactItem>
+          <Link href={'/'}>
+            <a>11 2123-3321</a>
+          </Link>
           <i aria-label="ícone telefone" className="fa-solid fa-phone"></i>
-        </S.ContactItem>
+        </SC.ContactItem>
       </ul>
-    </S.StyledContact>
+    </SC.StyledContact>
   );
-}
+};
+
+export default Contact;

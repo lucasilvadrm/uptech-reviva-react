@@ -1,29 +1,28 @@
-import { Product } from 'types/product';
-import { SizeInput, SizeLabel, StyledProductSize } from './styles';
+import { Product } from "types/product";
+import * as SC from "./styles";
 
 interface Props {
-  item: Product,
+  item: Product;
 }
 
 export function ProductSize({ item }: Props) {
   return (
-    <StyledProductSize>
+    <SC.StyledProductSize>
       {item.tamanhos_disponiveis.map((size, index) => {
         const sizeProduct = size.toLowerCase();
         return (
           <div key={index}>
-            <SizeInput
+            <SC.SizeInput
               type="radio"
               name={`select-size--product${item.id}`}
               id={`size-${sizeProduct}${item.id}`}
             />
-            <SizeLabel
-              htmlFor={`size-${sizeProduct}${item.id}`}>
+            <SC.SizeLabel htmlFor={`size-${sizeProduct}${item.id}`}>
               {sizeProduct.toUpperCase()}
-            </SizeLabel>
+            </SC.SizeLabel>
           </div>
         );
       })}
-    </StyledProductSize>
+    </SC.StyledProductSize>
   );
 }

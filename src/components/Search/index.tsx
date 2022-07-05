@@ -1,14 +1,14 @@
-import * as S from './styles';
+import * as SC from './styles';
 
 export default function Search() {
   return (
-    <S.StyledSearch>
-      <S.SearchInput
+    <SC.StyledSearch>
+      <SC.SearchInput
         type="text"
         placeholder="Faça sua busca aqui se já souber o que está procurando..." />
-      <S.SearchButton>
+      <SC.SearchButton>
         <i aria-label="ícone de pesquisa" className={`fa-solid fa-magnifying-glass`}></i>
-      </S.SearchButton>
-    </S.StyledSearch>
+      </SC.SearchButton>
+    </SC.StyledSearch>
   );
 } 

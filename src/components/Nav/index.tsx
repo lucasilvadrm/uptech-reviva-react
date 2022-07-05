@@ -1,14 +1,19 @@
-import { itemsNav } from 'components/Nav/NavItem/itemsNav';
-import { NavItem } from './NavItem';
-import { Menu, MenuList } from './styles';
+import { itemsNav } from "components/Nav/NavItem/itemsNav";
+import { NavItem } from "./NavItem";
+import * as SC from "./styles";
 
-export default function Navbar() {
+const Navbar = () => {
   return (
-    <Menu>
-      <MenuList>
-        {itemsNav.map((itemNav, index) =>
-          <NavItem key={index} to={itemNav.to}>{itemNav.name}</NavItem>)}
-      </MenuList>
-    </Menu>
-  )
-}
+    <SC.Menu>
+      <SC.MenuList>
+        {itemsNav.map((itemNav, index) => (
+          <NavItem key={index} to={itemNav.to}>
+            {itemNav.name}
+          </NavItem>
+        ))}
+      </SC.MenuList>
+    </SC.Menu>
+  );
+};
+
+export default Navbar;

@@ -1,14 +1,14 @@
-import { LogoSubtitle, LogoTitle, StyledLogo } from './styles';
+import * as SC from "./styles";
 
 interface Props {
-  mode?: string
+  mode?: string;
 }
 
 export default function Logo({ mode }: Props) {
   return (
-    <StyledLogo mode={mode}>
-      <LogoTitle>Reviva Fashion</LogoTitle>
-      <LogoSubtitle>by RCHLO</LogoSubtitle>
-    </StyledLogo>
-  )
+    <SC.StyledLogo mode={mode}>
+      <SC.LogoTitle>Reviva Fashion</SC.LogoTitle>
+      <SC.LogoSubtitle>by RCHLO</SC.LogoSubtitle>
+    </SC.StyledLogo>
+  );
 }

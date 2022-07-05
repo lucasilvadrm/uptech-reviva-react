@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { tertiaryColor } from 'components/UI/variables';
+import { tertiaryColor } from 'styles/variables';
 
 export const StyledSearch = styled.div`
   display: flex;
