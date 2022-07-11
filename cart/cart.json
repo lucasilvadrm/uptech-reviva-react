@@ -1,0 +1,37 @@
+[
+  {
+    "id": 4,
+    "tag": "releases",
+    "nome": "Saia Midi Feminina Evasê Floral Preto AK by Riachuelo",
+    "url": "",
+    "preco": 159.9,
+    "descricao": "A Saia Midi Feminina Evasê Floral Preto AK by Riachuelo é confeccionada em malha com padronagem floral. Com cós amplo e cordão para amarração, experimente combinar com a uma regata e crie um visual elegante. Aposte!",
+    "tamanhos_disponiveis": ["P", "M", "G"],
+    "quantidade_disponivel": 3,
+    "quantidade_carrinho": 4,
+    "imagens": [
+      {
+        "url": "images/products/lancamento-4.png",
+        "descricao": "imagem grande Saia Midi Feminina Evasê Floral Preto"
+      }
+    ],
+    "thumbnail": [
+      {
+        "url": "images/products/lancamento-4.png",
+        "descricao": "Imagem pequena de Saia Midi Feminina Evasê Floral Preto"
+      },
+      {
+        "url": "images/products/lancamento-4-part2.jpg",
+        "descricao": "Imagem pequena de Saia Midi Feminina Evasê Floral Preto"
+      },
+      {
+        "url": "images/products/lancamento-4-part3.jpg",
+        "descricao": "Imagem pequena de Saia Midi Feminina Evasê Floral Preto"
+      },
+      {
+        "url": "images/products/lancamento-4-part4.jpg",
+        "descricao": "Imagem pequena de Saia Midi Feminina Evasê Floral Preto"
+      }
+    ]
+  }
+]

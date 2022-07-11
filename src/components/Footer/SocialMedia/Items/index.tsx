@@ -1,12 +1,20 @@
+import Link from "next/link";
+import Image from "next/image";
 import { Icons } from "types/icons";
 import { SocialMediaItem } from "./styles";
 
-export const ItemsMedia = (icon: Icons) => {
+const ItemsMedia = (icon: Icons) => {
   return (
     <SocialMediaItem>
-      <a href={icon.link} target="blank">
-        <figure><img src={icon.urlIcon} alt={icon.alt}></img></figure>
-      </a>
+      <Link href={icon.link} target="blank">
+        <a>
+          <figure>
+            <img src={icon.urlIcon} alt={icon.alt} />
+          </figure>
+        </a>
+      </Link>
     </SocialMediaItem>
   );
-}
+};
+
+export default ItemsMedia;

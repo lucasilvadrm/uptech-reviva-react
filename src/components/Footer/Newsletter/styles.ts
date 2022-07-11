@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { tertiaryColor } from 'components/UI/variables';
+import { tertiaryColor } from "styles/variables";
 
 export const StyledNewsletter = styled.div`
   grid-area: newsletter;
@@ -15,7 +15,7 @@ export const NewsletterInput = styled.input`
   width: 70%;
   height: 3rem;
   margin-right: 1rem;
-  border: 1px solid #C4C4C4;
+  border: 1px solid #c4c4c4;
   font-size: 1.5rem;
 `;
 

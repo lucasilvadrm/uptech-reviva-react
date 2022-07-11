@@ -1,4 +1,4 @@
-<h1 align="center">Projeto Reviva Fashion - React</h1>
+<h1 align="center">Projeto Reviva Fashion - React - NextJs</h1>
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0;
@@ -30,6 +30,8 @@ The following tools were used in this project:
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [Typescript](https://www.typescriptlang.org/)
 - [React](https://pt-br.reactjs.org/)
+- [NextJs](https://nextjs.org/)
+- [JSON Server](https://www.npmjs.com/package/json-server)
 
 ## :white_check_mark: Requirements
 
@@ -42,14 +44,14 @@ Before starting :checkered_flag:, you need to have
 bash
 # Clone this project
 ```sh
-$ git clone https://github.com/lucasilvadrm/uptech-reviva-react
+$ git clone https://github.com/lucasilvadrm/uptech-reviva-react-next
 ```
 
 # Access
 ```sh
-$ cd uptech-reviva-react
+$ cd uptech-reviva-react-next
 $ npm install
-$ npm start
+$ npm run build
 ```
 
 # Open in your favorite browser

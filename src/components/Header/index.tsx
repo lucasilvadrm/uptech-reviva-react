@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Logo from "../Logo";
 import * as S from "./styles";
 import { quantityCartTotal } from "functions";
 import { useCart } from "contexts/CartContext";
-
 
 export default function Header() {
   const { cart } = useCart();
@@ -11,20 +10,20 @@ export default function Header() {
 
   return (
     <S.StyledHeader>
-      <Link to={'/'}>
+      <Link href={"/"}>
         <Logo />
       </Link>
-      <Link to={'/cart'}>
+      <Link href={"/cart"}>
         <S.ContainerIcon>
           <S.IconHeader
             aria-label="ícone sacola de compras"
-            className="fa-solid fa-bag-shopping" >
-          </S.IconHeader>
+            className="fa-solid fa-bag-shopping"
+          />
           <S.QuantityCart quantity={quantity__cart}>
             {quantity__cart}
           </S.QuantityCart>
         </S.ContainerIcon>
       </Link>
     </S.StyledHeader>
-  )
+  );
 }

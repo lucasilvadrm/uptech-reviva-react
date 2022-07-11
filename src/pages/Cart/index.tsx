@@ -1,7 +1,11 @@
-import { Wallet } from "./Wallet";
+import { useCart } from "contexts/CartContext";
+import { ContainerCart } from "modules/DetailsCart";
 
-export default function Cart() {
+const Cart = () => {
+  const { cart } = useCart();
   return (
-    <Wallet />
+    <ContainerCart cart={cart} />
   );
-}
+};
+
+export default Cart;

@@ -1,16 +1,16 @@
-import { Title } from '../styles';
-import * as S from './styles';
+import { Title } from "../styles";
+import * as SC from "./styles";
 
-export default function Newsletter() {
+const Newsletter = () => {
   return (
-    <S.StyledNewsletter>
+    <SC.StyledNewsletter>
       <Title>Assine nossa newsletter</Title>
-      <S.NewsletterSign>
-        <S.NewsletterInput type="text" />
-        <S.NewsletterButton>
-          Assinar Já
-        </S.NewsletterButton>
-      </S.NewsletterSign>
-    </S.StyledNewsletter>
+      <SC.NewsletterSign>
+        <SC.NewsletterInput type="text" />
+        <SC.NewsletterButton>Assinar Já</SC.NewsletterButton>
+      </SC.NewsletterSign>
+    </SC.StyledNewsletter>
   );
-}
+};
+
+export default Newsletter;

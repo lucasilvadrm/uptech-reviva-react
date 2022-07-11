@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { widthMain, fourthColor, tertiaryColor } from 'components/UI/variables';
+import { widthMain, fourthColor, tertiaryColor } from "styles/variables";
 
 export const StyledHeader = styled.header`
   align-items: center;
@@ -16,7 +16,7 @@ export const ContainerIcon = styled.div`
 `;
 
 interface IQuantityCart {
-  quantity: number
+  quantity: number;
 }
 
 export const QuantityCart = styled.span`
@@ -24,7 +24,7 @@ export const QuantityCart = styled.span`
     if (quantity === 0) {
       return css`
         display: none;
-      `
+      `;
     }
 
     return css`
@@ -35,7 +35,7 @@ export const QuantityCart = styled.span`
       height: 20px;
       background-color: ${fourthColor};
       border-radius: 50%;
-      padding: .1rem;
+      padding: 0.1rem;
       position: absolute;
       left: -5px;
       bottom: 0;
@@ -44,7 +44,6 @@ export const QuantityCart = styled.span`
       color: ${tertiaryColor};
       font-weight: bold;
     `;
-
   }}
 `;
 

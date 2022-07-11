@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { tertiaryColor, widthMain } from 'components/UI/variables';
+import { tertiaryColor, widthMain } from "styles/variables";
 
 export const Menu = styled.nav`
   width: 99%;

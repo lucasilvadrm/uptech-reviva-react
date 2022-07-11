@@ -1,8 +1,12 @@
 import styled, { css } from "styled-components";
-import { tertiaryColor, fontSizelogoTitle, fontSizelogoSubtitle } from 'components/UI/variables';
+import {
+  tertiaryColor,
+  fontSizelogoTitle,
+  fontSizelogoSubtitle,
+} from "styles/variables";
 
 interface IMode {
-  mode?: string
+  mode?: string;
 }
 
 export const LogoAlign = styled.div`
@@ -12,16 +16,16 @@ export const LogoAlign = styled.div`
 export const StyledLogo = styled(LogoAlign)`
   ${({ mode }: IMode) => {
     switch (mode) {
-      case 'banner':
+      case "banner":
         return css`
           bottom: 0;
-          margin-right: .7rem;
-          margin-bottom: .7rem;
+          margin-right: 0.7rem;
+          margin-bottom: 0.7rem;
           position: absolute;
           right: 0;
           color: ${tertiaryColor};
         `;
-      case 'footer':
+      case "footer":
         return css`
           grid-area: logo;
           justify-self: flex-start;

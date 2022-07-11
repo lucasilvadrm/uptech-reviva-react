@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { sm, tertiaryColor } from 'components/UI/variables';
+import { sm, tertiaryColor } from "styles/variables";
 
 export const StyledProductList = styled.section`
   margin-top: 2rem;

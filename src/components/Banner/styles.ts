@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fourthColor, tertiaryColor } from 'components/UI/variables';
+import { fourthColor, tertiaryColor } from "styles/variables";
 
 export const StyledBanner = styled.div`
   margin-top: 3rem;
