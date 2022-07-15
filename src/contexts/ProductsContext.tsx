@@ -1,40 +1,45 @@
-import { Product } from 'types/product';
-import { createContext, ReactNode, useContext, useState } from 'react';
-import { storage } from 'data/storage';
+import { Product } from "types/product";
+import { createContext, ReactNode, useContext, useState } from "react";
+import { storage } from "data/storage";
+import { Imagem } from "types/image";
 
 type ProductsContextProps = {
-  children: ReactNode
-}
+  children: ReactNode;
+};
 
 type PorductsContextType = {
-  products: Product[],
-  setProducts: (products: Product[]) => void
-}
+  products: Product[];
+  urlThumb: string;
+  setUrlThumb: (url: string) => void;
+  setProducts: (products: Product[]) => void;
+};
 
 const initialValue = {
   products: [...storage],
-  setProducts: () => { }
-}
+  urlThumb: "",
+  setUrlThumb: () => {},
+  setProducts: () => {},
+};
 
 export const ProductsContext = createContext<PorductsContextType>(initialValue);
-ProductsContext.displayName = 'Products';
+ProductsContext.displayName = "Products";
 
 const ProductProvider = ({ children }: ProductsContextProps) => {
   const [products, setProducts] = useState<Product[]>(initialValue.products);
+  const [urlThumb, setUrlThumb] = useState<string>(initialValue.urlThumb);
 
   return (
-    <ProductsContext.Provider value={{ products, setProducts }}>
+    <ProductsContext.Provider
+      value={{ products, setProducts, setUrlThumb, urlThumb }}
+    >
       {children}
     </ProductsContext.Provider>
   );
-}
+};
 
 const useProduct = () => {
   const context = useContext(ProductsContext);
   return context;
-}
+};
 
-export {
-  useProduct,
-  ProductProvider
-}
+export { useProduct, ProductProvider };

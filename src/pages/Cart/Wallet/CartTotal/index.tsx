@@ -1,14 +1,20 @@
-import { useCart } from 'contexts/CartContext';
-import { formactPrice } from 'functions';
-import { Product } from 'types/product';
-import { CartTotal, QuantityPrice, Total, TotalTitle, TotalValue, WalletButton } from './styles';
+import { useCart } from "contexts/CartContext";
+import { formactPrice } from "functions";
+import { Product } from "types/product";
+import {
+  CartTotal,
+  QuantityPrice,
+  Total,
+  TotalTitle,
+  TotalValue,
+  WalletButton,
+} from "./styles";
 
 interface Props {
-  cart: Product[]
+  cart: Product[];
 }
 
 export default () => {
-
   const { cart, totalCart } = useCart();
 
   return (
@@ -18,17 +24,17 @@ export default () => {
         <TotalValue>{totalCart()}</TotalValue>
       </Total>
       <QuantityPrice>
-        {cart.map(item => {
+        {cart.map((item) => {
           return (
             <li key={item.id}>
-              <p>{`${item.quantidade_carrinho.toString()} x ${formactPrice(item.preco)}`}</p>
+              <p>{`${item.quantidade_carrinho.toString()} x ${formactPrice(
+                item.preco
+              )}`}</p>
             </li>
           );
         })}
       </QuantityPrice>
-      <WalletButton>
-        Ir para pagamento
-      </WalletButton>
+      <WalletButton>Ir para pagamento</WalletButton>
     </CartTotal>
   );
-} 
+};

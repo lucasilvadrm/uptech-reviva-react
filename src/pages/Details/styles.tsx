@@ -18,6 +18,7 @@ export const ProductImage = styled.div`
   max-width: 33%;
   justify-content: center;
   display: flex;
+  
 
   img {
     align-self: center;
