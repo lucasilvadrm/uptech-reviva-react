@@ -13,30 +13,36 @@ export const GenericButton = styled.button`
 `;
 
 interface IQuantityStorage {
-  quantity?: number
+  quantity?: number;
 }
 
 export const StyledButton = styled(GenericButton)`
-${({ quantity }: IQuantityStorage) => {
+  ${({ quantity }: IQuantityStorage) => {
     if (quantity === 0) {
       return css`
-      cursor: none;
+        cursor: none;
         background-color: #a5a2a2;
         transition: 1s;
         i {
           display: none;
         }
-    `;
+      `;
     }
     return css`
       background-color: ${tertiaryColor};
       i {
         font-size: 2rem;
-        padding-right: .5rem;
+        padding-right: 0.5rem;
         position: absolute;
         right: 0;
       }
-  `;
+
+      transition: 1s;
+
+      &:hover {
+        transition: 1s;
+        opacity: 80%;
+      }
+    `;
   }}
-  
 `;

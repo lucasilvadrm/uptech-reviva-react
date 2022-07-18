@@ -1,7 +1,7 @@
-import WalletList from './ProductsInCart';
-import CartTotal from './CartTotal';
-import { StyledWallet, WalletTitle } from './styles';
-import { useCart } from 'contexts/CartContext';
+import CartTotal from "./components/CartTotal";
+import { StyledWallet, WalletTitle } from "./styles";
+import { useCart } from "contexts/CartContext";
+import WalletList from "./components/ProductsInCart";
 
 export const Wallet = () => {
   const { cart } = useCart();
@@ -12,4 +12,4 @@ export const Wallet = () => {
       <WalletList products={cart} />
     </StyledWallet>
   );
-}
+};

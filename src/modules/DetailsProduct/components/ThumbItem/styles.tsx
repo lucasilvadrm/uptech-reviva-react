@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const ThumbItem = styled.li`
+export const StyledThumbItem = styled.li`
   max-width: 16rem;
-  border: .1rem solid #C4C4C4;
+  border: 0.1rem solid #c4c4c4;
 `;
 
 export const ThumbProduct = styled.img`

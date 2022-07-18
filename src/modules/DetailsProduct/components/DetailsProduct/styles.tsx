@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { tertiaryColor } from 'components/UI/variables';
+import { tertiaryColor } from "components/UI/variables";
 
-export const ProductDetails = styled.div`
+export const StyledProductDetails = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -45,7 +45,7 @@ export const ProductButton = styled.button`
 
   .icon__purchase {
     font-size: 2rem;
-    padding-right: .5rem;
+    padding-right: 0.5rem;
     position: absolute;
     right: 0;
   }

@@ -1,7 +1,5 @@
-import { Wallet } from "./Wallet";
+import { Wallet } from "../../modules/DetailsCart";
 
 export default function Cart() {
-  return (
-    <Wallet />
-  );
+  return <Wallet />;
 }

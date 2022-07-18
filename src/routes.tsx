@@ -1,10 +1,10 @@
-import { DefaultPage } from "pages/DefaultPage";
+import { DefaultPage } from "templates/DefaultPage";
 import Cart from "pages/Cart";
 import Home from "pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import DetailsPage from "pages/Details";
 import { ProductProvider } from "contexts/ProductsContext";
 import { CartProvider } from "contexts/CartContext";
+import DetailsPage from "pages/Details";
 
 export default function AppRouter() {
   return (

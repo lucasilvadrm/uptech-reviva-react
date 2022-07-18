@@ -1,6 +1,6 @@
-import ThumbItem from "pages/Details/ThumbItem";
 import { ThumbList } from "./styles";
 import { useProduct } from "contexts/ProductsContext";
+import ThumbItem from "../ThumbItem";
 
 interface Props {
   id: number;

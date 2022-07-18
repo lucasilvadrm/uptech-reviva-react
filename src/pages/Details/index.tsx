@@ -1,10 +1,10 @@
-import { Product, ProductImage } from "./styles";
+import * as SC from "./styles";
 import { useParams } from "react-router-dom";
-import ProductDetails from "./DetailsProduct";
 import { ProductList } from "components/ProductList";
 import { useEffect } from "react";
 import Banner from "components/Banner";
 import { useProduct } from "contexts/ProductsContext";
+import ProductDetails from "modules/DetailsProduct/components/DetailsProduct";
 
 const DetailsPage = () => {
   const { products, urlThumb, setUrlThumb } = useProduct();
@@ -32,12 +32,12 @@ const DetailsPage = () => {
 
   return (
     <>
-      <Product>
-        <ProductImage>
+      <SC.Product>
+        <SC.ProductImage>
           <img src={urlThumb} alt={images.description} />
-        </ProductImage>
+        </SC.ProductImage>
         <ProductDetails product={product} />
-      </Product>
+      </SC.Product>
       <Banner />
       <ProductList
         title={`Quem viu ${product.nome} também comprou...`}
