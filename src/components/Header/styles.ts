@@ -51,4 +51,8 @@ export const QuantityCart = styled.span`
 export const IconHeader = styled.i`
   color: #6a808f;
   font-size: 3rem;
+  &:hover {
+    font-size: 3.1rem;
+    transition: 0.5s
+  }
 `;

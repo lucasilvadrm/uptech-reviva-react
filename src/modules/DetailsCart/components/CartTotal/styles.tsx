@@ -10,6 +10,10 @@ export const CartTotal = styled.article`
   display: grid;
   grid-template-rows: 20% 60% 20%;
   min-width: 22rem;
+
+  @media (max-width: 994px) {
+    grid-template-rows: 20% auto 6rem;
+  }
 `;
 
 export const Total = styled.div`

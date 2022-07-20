@@ -13,6 +13,16 @@ export const StyledWallet = styled.section`
   grid-template-areas:
     "wallet__title wallet__title"
     "wallet__list cart-total";
+
+  @media (max-width: 994px) {
+    /* background-color: red; */
+    grid-template-rows: 5rem 1fr 0.3fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "wallet__title"
+    "wallet__list"
+    "cart-total";
+  }
 `;
 
 export const WalletTitle = styled.h2`

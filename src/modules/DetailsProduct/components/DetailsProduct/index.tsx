@@ -3,7 +3,7 @@ import ThumbList from "../ThumbList";
 import { ProductSize } from "components/ProductSize";
 import * as SC from "./styles";
 import { formactPrice } from "functions";
-import { Button } from "components/Button";
+import Button from "components/Button";
 import { useCart } from "contexts/CartContext";
 
 interface PropsProduct {
@@ -11,9 +11,8 @@ interface PropsProduct {
 }
 
 const ProductDetails = ({ product }: PropsProduct) => {
-
   const { addProductInCart } = useCart();
-  const verify = product.quantidade_carrinho === product.quantidade_disponivel
+  const verify = product.quantidade_carrinho === product.quantidade_disponivel;
 
   return (
     <SC.StyledProductDetails>
@@ -24,9 +23,12 @@ const ProductDetails = ({ product }: PropsProduct) => {
       <ThumbList id={product.id} />
       <SC.ContainerBtnSize>
         <ProductSize item={product} />
-        <Button quantity={product.quantidade_disponivel} onClick={() => addProductInCart(product)}>
-        {verify ? 'INDISPONÍVEL' : `POR NA SACOLA`}
-      </Button>
+        <Button
+          onClick={() => addProductInCart(product)}
+          unavailable={product.quantidade_disponivel <= 0}
+        >
+          POR NA SACOLA
+        </Button>
       </SC.ContainerBtnSize>
     </SC.StyledProductDetails>
   );
