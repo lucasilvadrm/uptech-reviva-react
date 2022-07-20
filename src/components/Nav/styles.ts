@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { tertiaryColor, widthMain } from "components/UI/variables";
 
 export const Menu = styled.nav`
-  /* position: fixed; */
+  position: relative;
   width: 99%;
   height: 5rem;
   background-color: ${tertiaryColor};

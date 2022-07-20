@@ -10,7 +10,7 @@ interface BurgerProps {
 const StyledBurger = styled.div<BurgerProps>`
   width: 2rem;
   height: 2rem;
-  /* position: absolute; */
+  position: absolute;
   top: 14px;
   right: 12px;
   z-index: 20;
@@ -18,12 +18,12 @@ const StyledBurger = styled.div<BurgerProps>`
 
   @media (max-width: 768px) {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-flow: column nowrap;
   }
 
   div {
-    width: 2.5rem;
+    width: 2rem;
     height: 0.25rem;
     background-color: ${({ open }) => (open ? `${tertiaryColor}` : "#ffffff")};
     border-radius: 10px;

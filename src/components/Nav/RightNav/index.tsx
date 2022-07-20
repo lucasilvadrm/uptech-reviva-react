@@ -22,7 +22,7 @@ const MenuList = styled.ul<RightNavProps>`
     flex-flow: column nowrap;
     justify-content: start;
     background-color: ${fourthColor};
-    position: absolute;
+    /* position: absolute; */
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;
     right: 0;
@@ -30,7 +30,7 @@ const MenuList = styled.ul<RightNavProps>`
     width: 100%;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
-    z-index: 5;
+    /* z-index: 5; */
 
     li {
       color: ${tertiaryColor};
