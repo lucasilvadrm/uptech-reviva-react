@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { tertiaryColor } from 'components/UI/variables';
 
 const columnGap = `${3}rem`;
 
@@ -19,14 +18,14 @@ export const StyledWallet = styled.section`
     grid-template-rows: 5rem 1fr 0.3fr;
     grid-template-columns: 1fr;
     grid-template-areas:
-    "wallet__title"
-    "wallet__list"
-    "cart-total";
+      "wallet__title"
+      "wallet__list"
+      "cart-total";
   }
 `;
 
 export const WalletTitle = styled.h2`
   grid-area: wallet__title;
   font-size: 2.5rem;
-  color: ${tertiaryColor};
+  color: ${({ theme }) => theme.colors.tertiary};
 `;

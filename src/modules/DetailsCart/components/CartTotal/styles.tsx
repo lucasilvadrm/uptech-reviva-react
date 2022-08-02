@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import { tertiaryColor, fourthColor } from "components/UI/variables";
 
 export const StyledCartTotal = styled.article`
   grid-area: cart-total;
-  background-color: ${fourthColor};
+  background-color: ${({ theme }) => theme.colors.fourth};
   box-shadow: 0px 0px 9px -1px rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   padding: 0 1.3rem;
@@ -46,7 +45,7 @@ export const WalletButton = styled.button`
   width: 100%;
   height: 6rem;
   font-size: 1.4rem;
-  background-color: ${tertiaryColor};
+  background-color: ${({ theme }) => theme.colors.tertiary};
   align-self: flex-end;
   font-weight: 700;
   color: white;

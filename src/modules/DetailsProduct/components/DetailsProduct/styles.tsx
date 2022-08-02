@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { tertiaryColor } from "components/UI/variables";
 
 export const StyledProductDetails = styled.div`
   display: flex;
@@ -11,7 +10,7 @@ export const StyledProductDetails = styled.div`
 export const ProductTitle = styled.h2`
   font-size: 2.5rem;
   padding-bottom: 1.3rem;
-  color: ${tertiaryColor};
+  color: ${({ theme }) => theme.colors.tertiary};
 `;
 
 export const ProductDescription = styled.p`
@@ -39,7 +38,7 @@ export const ProductButton = styled.button`
   width: 30%;
   height: 4rem;
   font-size: 1.3rem;
-  background-color: ${tertiaryColor};
+  background-color: ${({ theme }) => theme.colors.tertiary};
   position: relative;
   color: white;
 
