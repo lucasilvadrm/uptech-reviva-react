@@ -1,5 +1,4 @@
 import Contact from 'components/Footer/Contact';
-import { formactPrice } from 'functions';
 import { render, screen } from '@testing-library/react';
 
 describe('Componente de contato', () => {
