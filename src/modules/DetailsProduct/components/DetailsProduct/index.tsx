@@ -6,11 +6,11 @@ import { formactPrice } from "functions";
 import Button from "components/Button";
 import { useCart } from "contexts/CartContext";
 
-interface PropsProduct {
+interface ProductProps {
   product: Product;
 }
 
-const ProductDetails = ({ product }: PropsProduct) => {
+const ProductDetails = ({ product }: ProductProps) => {
   const { addProductInCart } = useCart();
 
   return (
