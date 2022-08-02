@@ -12,7 +12,6 @@ interface PropsProduct {
 
 const ProductDetails = ({ product }: PropsProduct) => {
   const { addProductInCart } = useCart();
-  const verify = product.quantidade_carrinho === product.quantidade_disponivel;
 
   return (
     <SC.StyledProductDetails>

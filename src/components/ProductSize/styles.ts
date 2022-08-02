@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { tertiaryColor, fourthColor } from 'components/UI/variables';
 
 export const StyledProductSize = styled.fieldset`
   border: none;
@@ -18,16 +17,16 @@ export const StyledProductSize = styled.fieldset`
 `;
 
 export const SizeLabel = styled.label`
-  border: solid .1rem ${tertiaryColor};
+  border: solid 0.1rem ${({ theme }) => theme.colors.tertiary};
   display: flex;
   justify-content: center;
   height: 2.7rem;
-  margin: .7rem;
+  margin: 0.7rem;
   width: 1.5em;
-  color: ${tertiaryColor};
+  color: ${({ theme }) => theme.colors.tertiary};
 
   &:hover {
-    background-color: ${fourthColor};
+    background-color: ${({ theme }) => theme.colors.fourth};
     cursor: pointer;
   }
 `;
@@ -35,10 +34,9 @@ export const SizeLabel = styled.label`
 export const SizeInput = styled.input`
   display: none;
 
-  &:checked+${SizeLabel} {
-    background-color: ${tertiaryColor};
+  &:checked + ${SizeLabel} {
+    background-color: ${({ theme }) => theme.colors.tertiary};
     border: 1px solid;
-    color: ${fourthColor};
+    color: ${({ theme }) => theme.colors.fourth};
   }
-
 `;

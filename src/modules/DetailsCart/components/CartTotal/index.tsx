@@ -1,8 +1,7 @@
 import { useCart } from "contexts/CartContext";
 import { formactPrice } from "functions";
-import { Product } from "types/product";
 import {
-  CartTotal,
+  StyledCartTotal,
   QuantityPrice,
   Total,
   TotalTitle,
@@ -10,15 +9,12 @@ import {
   WalletButton,
 } from "./styles";
 
-interface Props {
-  cart: Product[];
-}
-
-export default () => {
+const CartTotal = () => {
   const { cart, totalCart } = useCart();
 
   return (
-    <CartTotal>
+    <StyledCartTotal>
+      ''
       <Total>
         <TotalTitle>Total</TotalTitle>
         <TotalValue>{totalCart()}</TotalValue>
@@ -35,6 +31,8 @@ export default () => {
         })}
       </QuantityPrice>
       <WalletButton>Ir para pagamento</WalletButton>
-    </CartTotal>
+    </StyledCartTotal>
   );
 };
+
+export default CartTotal;

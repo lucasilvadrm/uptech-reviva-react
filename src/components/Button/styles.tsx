@@ -1,4 +1,3 @@
-import { fourthColor, tertiaryColor } from "components/UI/variables";
 import styled, { css } from "styled-components";
 
 export const ButtonBagContent = styled.div`
@@ -32,7 +31,7 @@ export const ProductButtonBag = styled.div`
 export const ContentFrontButton = styled.div`
   align-items: center;
   backface-visibility: hidden;
-  background: url(../../icons/logo-bag-white.svg) ${tertiaryColor} right no-repeat;
+  background: url(../../icons/logo-bag-white.svg) ${({theme}) => theme.colors.tertiary} right no-repeat;
   border: 0.5em solid transparent;
   box-shadow: 0 0 15px #00000036;
   box-sizing: border-box;
@@ -54,9 +53,8 @@ interface ContentBackButtonProps {
 }
 
 export const ContentBackButton = styled(ContentFrontButton)<ContentBackButtonProps>`
-  background: no-repeat center ${fourthColor} url(../../icons/check-solid.svg);
+  background: no-repeat center ${({theme}) => theme.colors.fourth} url(../../icons/check-solid.svg);
   border: none;
-  /* color: blue; */
   overflow: hidden;
   transform: rotateY(180deg);
   transition: 0.1s all ease-in-out;

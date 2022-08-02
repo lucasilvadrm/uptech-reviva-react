@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { tertiaryColor, fontSizelogoTitle, fontSizelogoSubtitle } from 'components/UI/variables';
 
 interface IMode {
   mode?: string
@@ -19,7 +18,7 @@ export const StyledLogo = styled(LogoAlign)`
           margin-bottom: .7rem;
           position: absolute;
           right: 0;
-          color: ${tertiaryColor};
+          color: ${({theme}) => theme.colors.tertiary};
         `;
       case 'footer':
         return css`
@@ -35,14 +34,14 @@ export const StyledLogo = styled(LogoAlign)`
 `;
 
 export const LogoTitle = styled.h1`
-  font-size: ${fontSizelogoTitle};
+  font-size: ${({theme}) => theme.fonts.fontSizelogoTitle};
   font-weight: 700;
   margin: 0;
-  color: ${tertiaryColor};
+  color: ${({theme}) => theme.colors.tertiary};
 `;
 
 export const LogoSubtitle = styled.span`
-  font-size: ${fontSizelogoSubtitle};
+  font-size: ${({theme}) => theme.fonts.fontSizelogoSubtitle};
   margin: 0;
-  color: ${tertiaryColor};
+  color: ${({theme}) => theme.colors.tertiary};
 `;

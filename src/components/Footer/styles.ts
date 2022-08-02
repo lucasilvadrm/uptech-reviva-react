@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { secondaryColor, widthMain } from 'components/UI/variables';
 
 export const StyledFooter = styled.footer`
-  border-top: 1px solid ${secondaryColor};
+  border-top: 1px solid ${({theme}) => theme.colors.secondary};
   padding: 1rem 1rem 0 1rem;
-  max-width: ${widthMain};
+  max-width: ${({theme}) => theme.width.widthMain};
   margin: auto;
   height: 30rem;
   display: grid;

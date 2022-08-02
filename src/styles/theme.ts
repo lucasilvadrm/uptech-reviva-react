@@ -1,6 +1,6 @@
 import { DefaultTheme } from "styled-components";
 
-export const theme: DefaultTheme = {
+const theme: DefaultTheme = {
   colors: {
     primary: "#D3DEDC",
     secondary: "#92A9BD",
@@ -17,6 +17,13 @@ export const theme: DefaultTheme = {
     xxl: "1400px",
   },
   width: {
-    width: "1400px",
+    widthMain: "1400px",
+  },
+  fonts: {
+    fontSizeGlobal: "62.5%",
+    fontSizelogoTitle: "3rem",
+    fontSizelogoSubtitle: "1rem",
   },
 };
+
+export default theme;

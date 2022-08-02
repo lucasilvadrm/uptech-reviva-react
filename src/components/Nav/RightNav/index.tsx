@@ -1,4 +1,3 @@
-import { fourthColor, tertiaryColor, widthMain } from "components/UI/variables";
 import styled from "styled-components";
 import { NavItem } from "../NavItem";
 import { itemsNav } from "../NavItem/itemsNav";
@@ -8,7 +7,7 @@ interface RightNavProps {
 }
 
 const MenuList = styled.ul<RightNavProps>`
-  width: ${widthMain};
+  width: ${({ theme }) => theme.width.widthMain};
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -21,7 +20,7 @@ const MenuList = styled.ul<RightNavProps>`
   @media (max-width: 768px) {
     flex-flow: column nowrap;
     justify-content: start;
-    background-color: ${fourthColor};
+    background-color: ${({ theme }) => theme.colors.fourth};
     /* position: absolute; */
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;
@@ -33,7 +32,7 @@ const MenuList = styled.ul<RightNavProps>`
     /* z-index: 5; */
 
     li {
-      color: ${tertiaryColor};
+      color: ${({ theme }) => theme.colors.tertiary};
     }
   }
 `;

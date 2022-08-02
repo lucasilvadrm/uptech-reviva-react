@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { tertiaryColor } from 'components/UI/variables';
 
 export const StyledSearch = styled.div`
   display: flex;
@@ -9,7 +8,7 @@ export const StyledSearch = styled.div`
 `;
 
 export const SearchInput = styled.input`
-  border: 1px solid #C4C4C4;
+  border: 1px solid #c4c4c4;
   font-size: 1.5rem;
   margin-right: 0.5rem;
   width: 92%;
@@ -19,7 +18,7 @@ export const SearchButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${tertiaryColor};
+  background-color: ${({ theme }) => theme.colors.tertiary};
   width: 8%;
 
   i {

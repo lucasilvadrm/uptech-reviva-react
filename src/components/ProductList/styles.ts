@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { sm, tertiaryColor } from 'components/UI/variables';
 
 export const StyledProductList = styled.section`
   margin-top: 2rem;
@@ -10,7 +9,7 @@ export const Title = styled.h2`
   font-weight: 700;
   margin-bottom: 2rem;
   font-size: 2rem;
-  color: ${tertiaryColor};
+  color: ${({ theme }) => theme.colors.tertiary};
 `;
 
 export const ListItems = styled.ul`
@@ -23,7 +22,7 @@ export const ListItems = styled.ul`
     grid-template-columns: 1fr 1fr;
   }
 
-  @media screen and (max-width: ${sm}) {
+  @media screen and (max-width: ${({theme}) => theme.breakpoints.sm}) {
     gap: 2rem;
     grid-template-columns: 1fr;
   }

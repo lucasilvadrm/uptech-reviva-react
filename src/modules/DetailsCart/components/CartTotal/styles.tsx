@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { tertiaryColor, fourthColor } from 'components/UI/variables';
+import { tertiaryColor, fourthColor } from "components/UI/variables";
 
-export const CartTotal = styled.article`
+export const StyledCartTotal = styled.article`
   grid-area: cart-total;
   background-color: ${fourthColor};
-  box-shadow: 0px 0px 9px -1px rgba(0,0,0,0.20);
-  border-radius: .3rem;
+  box-shadow: 0px 0px 9px -1px rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
   padding: 0 1.3rem;
   display: grid;
   grid-template-rows: 20% 60% 20%;

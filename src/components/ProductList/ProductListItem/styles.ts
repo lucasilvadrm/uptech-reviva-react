@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { tertiaryColor } from "components/UI/variables";
 
 export const StyledProductListItem = styled.li`
   display: flex;
@@ -37,7 +36,7 @@ export const ItemTitle = styled.h3`
 export const ItemPrice = styled.p`
   font-size: 1.5rem;
   font-weight: 700;
-  color: ${tertiaryColor};
+  color: ${({theme}) => theme.colors.tertiary};
 
   @media screen and (max-width: 988px) {
     font-size: 1.3rem;

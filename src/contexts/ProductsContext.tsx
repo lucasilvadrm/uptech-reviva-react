@@ -1,7 +1,6 @@
-import { Product } from "types/product";
 import { createContext, ReactNode, useContext, useState } from "react";
 import { storage } from "data/storage";
-import { Imagem } from "types/image";
+import { Product } from "types/product";
 
 type ProductsContextProps = {
   children: ReactNode;

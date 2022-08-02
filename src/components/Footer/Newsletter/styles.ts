@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { tertiaryColor } from 'components/UI/variables';
 
 export const StyledNewsletter = styled.div`
   grid-area: newsletter;
@@ -23,6 +22,6 @@ export const NewsletterButton = styled.button`
   width: 30%;
   height: auto;
   font-size: 1.7rem;
-  background-color: ${tertiaryColor};
+  background-color: ${({theme}) => theme.colors.tertiary};
   color: white;
 `;

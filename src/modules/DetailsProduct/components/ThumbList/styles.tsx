@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ThumbList = styled.ul`
+export const StyledThumbList = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: space-between;

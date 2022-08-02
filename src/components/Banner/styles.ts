@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import { fourthColor, tertiaryColor } from 'components/UI/variables';
 
 export const StyledBanner = styled.div`
   margin-top: 3rem;
   margin-bottom: 3rem;
   width: 100%;
   height: 16rem;
-  background-color: ${fourthColor};
+  background-color: ${(props) => props.theme.colors.fourth};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +17,7 @@ export const StyledBanner = styled.div`
 export const BannerText = styled.p`
   letter-spacing: 1rem;
   font-size: 1.9rem;
-  color: ${tertiaryColor};
+  color: ${(props) => props.theme.colors.tertiary};
   font-weight: 700;
 
   &::first-line {

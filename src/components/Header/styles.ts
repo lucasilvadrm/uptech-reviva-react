@@ -1,12 +1,11 @@
 import styled, { css } from "styled-components";
-import { widthMain, fourthColor, tertiaryColor } from 'components/UI/variables';
 
 export const StyledHeader = styled.header`
   align-items: center;
   display: flex;
   height: 12rem;
   justify-content: space-between;
-  max-width: ${widthMain};
+  max-width: ${({ theme }) => theme.width.widthMain};
   margin: auto;
   padding: 1rem 2rem 1rem 2rem;
 `;
@@ -16,7 +15,7 @@ export const ContainerIcon = styled.div`
 `;
 
 interface IQuantityCart {
-  quantity: number
+  quantity: number;
 }
 
 export const QuantityCart = styled.span`
@@ -24,7 +23,7 @@ export const QuantityCart = styled.span`
     if (quantity === 0) {
       return css`
         display: none;
-      `
+      `;
     }
 
     return css`
@@ -33,18 +32,17 @@ export const QuantityCart = styled.span`
       align-items: center;
       width: 20px;
       height: 20px;
-      background-color: ${fourthColor};
+      background-color: ${({ theme }) => theme.colors.fourth};
       border-radius: 50%;
-      padding: .1rem;
+      padding: 0.1rem;
       position: absolute;
       left: -5px;
       bottom: 0;
       top: 20px;
       right: 0;
-      color: ${tertiaryColor};
+      color: ${({ theme }) => theme.colors.tertiary};
       font-weight: bold;
     `;
-
   }}
 `;
 
@@ -53,6 +51,6 @@ export const IconHeader = styled.i`
   font-size: 3rem;
   &:hover {
     font-size: 3.1rem;
-    transition: 0.5s
+    transition: 0.5s;
   }
 `;

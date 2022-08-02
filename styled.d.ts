@@ -18,7 +18,12 @@ declare module "styled-components" {
       xxl: string;
     };
     width: {
-      width: string;
+      widthMain: string;
+    };
+    fonts: {
+      fontSizeGlobal: string;
+      fontSizelogoTitle: string;
+      fontSizelogoSubtitle: string;
     };
   }
 }

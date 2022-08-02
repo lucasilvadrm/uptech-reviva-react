@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { tertiaryColor } from 'components/UI/variables';
 
 export const StyledBlog = styled.section`
   width: 100%;
@@ -29,7 +28,7 @@ export const BlogTitle = styled.h2`
   font-weight: 700;
   margin-bottom: 2rem;
   font-size: 2rem;
-  color: ${tertiaryColor};
+  color: ${({theme}) => theme.colors.tertiary};
 `;
 
 export const ArticleMain = styled.article`
