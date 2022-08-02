@@ -14,7 +14,6 @@ const CartTotal = () => {
 
   return (
     <StyledCartTotal>
-      ''
       <Total>
         <TotalTitle>Total</TotalTitle>
         <TotalValue>{totalCart()}</TotalValue>
