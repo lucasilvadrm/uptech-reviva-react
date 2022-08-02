@@ -4,7 +4,7 @@ import { formactPrice } from "functions";
 import { Product } from "types/product";
 import { useNavigate } from "react-router-dom";
 import {
-  ProductListItem,
+  StyledProductListItem,
   ItemDetails,
   ItemDescription,
   ItemPrice,
@@ -16,28 +16,19 @@ interface PropsProductItem {
   item: Product;
 }
 
-export default ({ item }: PropsProductItem) => {
+const ProductListItem = ({ item }: PropsProductItem) => {
   const { addProductInCart } = useCart();
 
   const navigate = useNavigate();
 
-  const {
-    id,
-    imagens,
-    nome,
-    preco,
-    quantidade_carrinho,
-    quantidade_disponivel,
-  } = item;
+  const { id, imagens, nome, preco } = item;
 
   function redirectDetail(product: Product) {
     navigate(`/details/${product.id}`, { state: { product } });
   }
 
-  const verify = quantidade_carrinho === quantidade_disponivel;
-
   return (
-    <ProductListItem key={id}>
+    <StyledProductListItem key={id}>
       <ItemDetails>
         <img
           onClick={() => redirectDetail(item)}
@@ -56,6 +47,8 @@ export default ({ item }: PropsProductItem) => {
       >
         POR NA SACOLA
       </Button>
-    </ProductListItem>
+    </StyledProductListItem>
   );
 };
+
+export default ProductListItem;

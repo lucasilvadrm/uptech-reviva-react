@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { tertiaryColor } from 'components/UI/variables'
+import { tertiaryColor } from "components/UI/variables";
 
-export const ProductListItem = styled.li`
+export const StyledProductListItem = styled.li`
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -23,7 +23,7 @@ export const ItemDetails = styled.div`
 export const ItemDescription = styled.div`
   margin: 1.6rem 0;
   display: grid;
-  gap: .6rem;
+  gap: 0.6rem;
 `;
 
 export const ItemTitle = styled.h3`
@@ -40,7 +40,6 @@ export const ItemPrice = styled.p`
   color: ${tertiaryColor};
 
   @media screen and (max-width: 988px) {
-      font-size: 1.3rem;
+    font-size: 1.3rem;
   }
-
 `;

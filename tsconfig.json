@@ -21,7 +21,7 @@
     "jsx": "react-jsx",
     "downlevelIteration": true,
     "plugins": [{ "name": "typescript-plugin-css-modules" }],
-    "baseUrl": "./src",
+    "baseUrl": "src",
     "paths": {
       "@components/*": ["components/*"],
       "@pages/*": ["pages/*"],
